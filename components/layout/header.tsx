@@ -5,6 +5,10 @@ import { Container } from "../util/container";
 import { useTheme } from ".";
 import { Icon } from "../util/icon";
 
+import { Fragment } from 'react'
+import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+
 export const Header = ({ data }) => {
   const router = useRouter();
   const theme = useTheme();
@@ -65,27 +69,137 @@ export const Header = ({ data }) => {
   }, []);
 
   return (
-    <div
-      className={`relative overflow-hidden bg-gradient-to-b ${headerColorCss}`}
+    <Disclosure as="nav"
+      className={`relative shadow-md overflow-hidden bg-gradient-to-b ${headerColorCss}`}
     >
-      <Container size="custom" className="py-0 relative z-10 max-w-8xl">
-        <div className="flex items-center justify-between gap-6">
-          <h4 className="select-none text-lg font-bold tracking-tight my-4 transition duration-150 ease-out transform">
-            <Link href="/" passHref>
-              <a className="flex gap-1 items-center whitespace-nowrap tracking-[.002em]">
-                <Icon
-                  parentColor={data.color}
-                  data={{
-                    name: data.icon.name,
-                    color: data.icon.color,
-                    style: data.icon.style,
-                  }}
-                />
-                {data.name}
-              </a>
-            </Link>
-          </h4>
-          <ul className="flex gap-6 sm:gap-8 lg:gap-10 tracking-[.002em] -mx-4">
+      {({ open }) => (
+      <>
+        <Container size="custom" className="py-0 relative z-10 max-w-8xl">
+          {/* Menu pleine ecran */}
+          <div className="flex items-center justify-between gap-6">
+            {/* Burger menu */}
+            <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              {/* Mobile menu button*/}
+              <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <span className="sr-only">Open main menu</span>
+                {open ? (
+                  <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                ) : (
+                  <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                )}
+              </Disclosure.Button>
+            </div>
+            {/* Burger menu */}
+            {/* Icon + titre */}
+            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex flex-shrink-0 items-center">
+                <h4 className="select-none text-lg font-bold tracking-tight my-4 transition duration-150 ease-out transform">
+                  <Link href="/" passHref className="block h-8 w-auto lg:hidden">
+                    <a className=" gap-1 items-center whitespace-nowrap h-8 w-auto tracking-[.002em] flex lg:hidden">
+                      <Icon
+                        parentColor={data.color}
+                        data={{
+                          name: data.icon.name,
+                          color: data.icon.color,
+                          style: data.icon.style,
+                        }}
+                      />
+                      {data.name}
+                    </a>
+                  </Link>
+                  <Link href="/" passHref className="hidden h-8 w-auto lg:block">
+                    <a className=" gap-1 items-center whitespace-nowrap h-8 w-auto tracking-[.002em] hidden lg:flex">
+                      <Icon
+                        parentColor={data.color}
+                        data={{
+                          name: data.icon.name,
+                          color: data.icon.color,
+                          style: data.icon.style,
+                        }}
+                      />
+                      {data.name}
+                    </a>
+                  </Link>
+                </h4>
+              </div>
+            </div>
+            {/* fin Icon */}
+            <ul className="gap-6 sm:gap-8 lg:gap-10 tracking-[.002em] -mx-4 hidden sm:flex">
+              <div className="flex space-x-4">
+                {data.nav &&
+                  data.nav.map((item, i) => {
+                  const activeItem =
+                    item.href === ""
+                      ? router.asPath === "/"
+                      : router.asPath.includes(item.href);
+                  return (
+                    <li
+                      key={`${item.label}-${i}`}
+                      className={`${
+                        activeItem ? activeItemClasses[theme.color] : ""
+                      }`}
+                    >
+                      <Link href={`${prefix}/${item.href}`} passHref>
+                        <a
+                          className={`relative select-none	text-base inline-block tracking-wide transition duration-150 ease-out hover:opacity-100 py-8 px-4 ${
+                            activeItem ? `` : `opacity-70`
+                          }`}
+                        >
+                          {item.label}
+                          {activeItem && (
+                            <svg
+                              className={`absolute bottom-0 left-1/2 w-[180%] h-full -translate-x-1/2 -z-1 opacity-10 dark:opacity-15 ${
+                                activeBackgroundClasses[theme.color]
+                              }`}
+                              preserveAspectRatio="none"
+                              viewBox="0 0 230 230"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                x="230"
+                                y="230"
+                                width="230"
+                                height="230"
+                                transform="rotate(-180 230 230)"
+                                fill="url(#paint0_radial_1_33)"
+                              />
+                              <defs>
+                                <radialGradient
+                                  id="paint0_radial_1_33"
+                                  cx="0"
+                                  cy="0"
+                                  r="1"
+                                  gradientUnits="userSpaceOnUse"
+                                  gradientTransform="translate(345 230) rotate(90) scale(230 115)"
+                                >
+                                  <stop stopColor="currentColor" />
+                                  <stop
+                                    offset="1"
+                                    stopColor="currentColor"
+                                    stopOpacity="0"
+                                  />
+                                </radialGradient>
+                              </defs>
+                            </svg>
+                          )}
+                        </a>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </div>
+            </ul>
+          </div>
+          {/* fin Menu pleine ecran */}
+          <div
+            className={`absolute h-1 bg-gradient-to-r from-transparent ${
+              data.color === "primary" ? `via-white` : `via-black dark:via-white`
+            } to-transparent bottom-0 left-4 right-4 -z-1 opacity-5`}
+          />
+        </Container>
+        <Disclosure.Panel className="sm:hidden shadow-md">
+          <div className="space-y-1 px-2 pt-2 pb-3  shadow-md">
             {data.nav &&
               data.nav.map((item, i) => {
                 const activeItem =
@@ -93,69 +207,23 @@ export const Header = ({ data }) => {
                     ? router.asPath === "/"
                     : router.asPath.includes(item.href);
                 return (
-                  <li
-                    key={`${item.label}-${i}`}
-                    className={`${
-                      activeItem ? activeItemClasses[theme.color] : ""
+                  <Disclosure.Button
+                    key={item.name}
+                    as="a"
+                    href={`${prefix}/${item.href}`}
+                    className={` select-none text-base text-headerblack hover:opacity-100 hover:bg-gray-700 py-2 px-4 block ${
+                      activeItem ? `` : `opacity-70`
                     }`}
+                    aria-current={item.current ? 'page' : undefined}
                   >
-                    <Link href={`${prefix}/${item.href}`} passHref>
-                      <a
-                        className={`relative select-none	text-base inline-block tracking-wide transition duration-150 ease-out hover:opacity-100 py-8 px-4 ${
-                          activeItem ? `` : `opacity-70`
-                        }`}
-                      >
-                        {item.label}
-                        {activeItem && (
-                          <svg
-                            className={`absolute bottom-0 left-1/2 w-[180%] h-full -translate-x-1/2 -z-1 opacity-10 dark:opacity-15 ${
-                              activeBackgroundClasses[theme.color]
-                            }`}
-                            preserveAspectRatio="none"
-                            viewBox="0 0 230 230"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <rect
-                              x="230"
-                              y="230"
-                              width="230"
-                              height="230"
-                              transform="rotate(-180 230 230)"
-                              fill="url(#paint0_radial_1_33)"
-                            />
-                            <defs>
-                              <radialGradient
-                                id="paint0_radial_1_33"
-                                cx="0"
-                                cy="0"
-                                r="1"
-                                gradientUnits="userSpaceOnUse"
-                                gradientTransform="translate(345 230) rotate(90) scale(230 115)"
-                              >
-                                <stop stopColor="currentColor" />
-                                <stop
-                                  offset="1"
-                                  stopColor="currentColor"
-                                  stopOpacity="0"
-                                />
-                              </radialGradient>
-                            </defs>
-                          </svg>
-                        )}
-                      </a>
-                    </Link>
-                  </li>
-                );
-              })}
-          </ul>
-        </div>
-        <div
-          className={`absolute h-1 bg-gradient-to-r from-transparent ${
-            data.color === "primary" ? `via-white` : `via-black dark:via-white`
-          } to-transparent bottom-0 left-4 right-4 -z-1 opacity-5`}
-        />
-      </Container>
-    </div>
+                    {item.label}
+                  </Disclosure.Button>
+              );
+            })}
+          </div>
+        </Disclosure.Panel>
+      </>
+      )}
+    </Disclosure>
   );
 };

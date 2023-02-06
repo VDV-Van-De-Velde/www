@@ -277,6 +277,14 @@ const config = defineStaticConfig({
                     label: "Lato",
                     value: "lato",
                   },
+                  {
+                    label: "Manrope",
+                    value: "manrope",
+                  },
+                  {
+                    label: "Lora",
+                    value: "lora",
+                  },
                 ],
               },
               {

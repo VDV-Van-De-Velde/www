@@ -9,6 +9,7 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
+      headerblack: "#232323",
       black: colors.black,
       white: colors.white,
       teal: colors.cyan,
@@ -18,19 +19,19 @@ module.exports = {
       pink: colors.pink,
       yellow: colors.yellow,
       gray: {
-        50: "#F6F6F9",
-        100: "#EDECF3",
-        150: "#E6E3EF",
-        200: "#E1DDEC",
-        250: "#C9C5D5",
-        300: "#b2adbe",
-        400: "#918c9e",
-        500: "#716c7f",
-        600: "#565165",
-        700: "#433e52",
-        800: "#363145",
-        900: "#252336",
-        1000: "#1c1b2e",
+        50: "#f9fafb ",
+        100: "#e9ecee ",
+        150: "#dadee1 ",
+        200: "#cbd0d5 ",
+        250: "#bcc2c8 ",
+        300: "#adb4bb ",
+        400: "#9ea6af ",
+        500: "#8f98a2 ",
+        600: "#808a95 ",
+        700: "#717c89  ",
+        800: "#626e7c  ",
+        900: "#535f6f  ",
+        1000: "#445263  ",
       },
       blue: {
         50: "#DCEEFF",
@@ -101,6 +102,8 @@ module.exports = {
       fontFamily: {
         nunito: ["Nunito", ...defaultTheme.fontFamily.sans],
         lato: ["Lato", ...defaultTheme.fontFamily.sans],
+        manrope: ["Manrope", ...defaultTheme.fontFamily.sans],
+        lora: ["Lora", ...defaultTheme.fontFamily.sans],
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -130,8 +133,9 @@ module.exports = {
         tint: {
           css: {
             pre: {
-              color: theme("colors.gray.800"),
+              color: theme("colors.white"),
               backgroundColor: theme("colors.gray.150"),
+
             },
           },
         },
