@@ -1364,7 +1364,22 @@
   "resolved" "https://registry.npmjs.org/@headlessui/react/-/react-1.6.6.tgz"
   "version" "1.6.6"
 
-"@heroicons/react@^1.0.4", "@heroicons/react@^1.0.5", "@heroicons/react@1.0.6":
+"@heroicons/react@^1.0.4":
+  "integrity" "sha512-JJCXydOFWMDpCP4q13iEplA503MQO3xLoZiKum+955ZCtHINWnx26CUxVxxFQu/uLb4LW3ge15ZpzIkXKkJ8oQ=="
+  "resolved" "https://registry.npmjs.org/@heroicons/react/-/react-1.0.6.tgz"
+  "version" "1.0.6"
+
+"@heroicons/react@^1.0.5":
+  "integrity" "sha512-JJCXydOFWMDpCP4q13iEplA503MQO3xLoZiKum+955ZCtHINWnx26CUxVxxFQu/uLb4LW3ge15ZpzIkXKkJ8oQ=="
+  "resolved" "https://registry.npmjs.org/@heroicons/react/-/react-1.0.6.tgz"
+  "version" "1.0.6"
+
+"@heroicons/react@^2.0.14":
+  "integrity" "sha512-eFL4if6L7woL1fUvk/jjXx4z9NxVESHHrQnEd2qKVelTFTIr/3VLGWdPb0biia9ZVe26P0JSs/xmOlRNur3SrQ=="
+  "resolved" "https://registry.npmjs.org/@heroicons/react/-/react-2.0.14.tgz"
+  "version" "2.0.14"
+
+"@heroicons/react@1.0.6":
   "integrity" "sha512-JJCXydOFWMDpCP4q13iEplA503MQO3xLoZiKum+955ZCtHINWnx26CUxVxxFQu/uLb4LW3ge15ZpzIkXKkJ8oQ=="
   "resolved" "https://registry.npmjs.org/@heroicons/react/-/react-1.0.6.tgz"
   "version" "1.0.6"
@@ -4708,10 +4723,17 @@
   dependencies:
     "@babel/runtime" "^7.10.0"
 
-"final-form@4.20.1", "final-form@4.20.7":
+"final-form@4.20.1":
   "integrity" "sha512-IIsOK3JRxJrN72OBj7vFWZxtGt3xc1bYwJVPchjVWmDol9DlzMSAOPB+vwe75TUYsw1JaH0fTQnIgwSQZQ9Acg=="
   "resolved" "https://registry.npmjs.org/final-form/-/final-form-4.20.1.tgz"
   "version" "4.20.1"
+  dependencies:
+    "@babel/runtime" "^7.10.0"
+
+"final-form@4.20.7":
+  "integrity" "sha512-ii3X9wNfyBYFnDPunYN5jh1/HAvtOZ9aJI/TVk0MB86hZuOeYkb+W5L3icgwW9WWNztZR6MDU3En6eoZTUoFPg=="
+  "resolved" "https://registry.npmjs.org/final-form/-/final-form-4.20.7.tgz"
+  "version" "4.20.7"
   dependencies:
     "@babel/runtime" "^7.10.0"
 
