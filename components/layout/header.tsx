@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import Script from 'next/script'
+import { PagefindUI } from "@pagefind/default-ui/npm_dist/mjs/ui-core.mjs";
 import { useRouter } from "next/router";
 import { Container } from "../util/container";
 import { useTheme } from ".";
@@ -122,6 +124,9 @@ export const Header = ({ data }) => {
               </div>
             </div>
             {/* fin Icon */}
+            {/* <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+            <Script id="PagefindUI" src="/pagefind/pagefind-ui.js" onReady={()=> {new PagefindUI({ element: '#search', showImages: false })}}/>
+            <div id="search" className="ml-3 p-4"></div> */}
             <ul className="gap-6 sm:gap-8 lg:gap-10 tracking-[.002em] -mx-4 hidden sm:flex">
               <div className="flex space-x-4">
                 {data.nav &&
@@ -199,7 +204,7 @@ export const Header = ({ data }) => {
         <Disclosure.Panel className="sm:hidden shadow-md">
           <div className="space-y-1 px-2 pt-2 pb-3  shadow-md">
             {data.nav &&
-              data.nav.map((item, i) => {
+              data.nav.map((item) => {
                 const activeItem =
                   item.href === ""
                     ? router.asPath === "/"
