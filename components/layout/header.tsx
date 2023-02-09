@@ -4,10 +4,8 @@ import { useRouter } from "next/router";
 import { Container } from "../util/container";
 import { useTheme } from ".";
 import { Icon } from "../util/icon";
-
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 export const Header = ({ data }) => {
   const router = useRouter();
@@ -70,7 +68,7 @@ export const Header = ({ data }) => {
 
   return (
     <Disclosure as="nav"
-      className={`relative shadow-md overflow-hidden bg-gradient-to-b ${headerColorCss}`}
+      className={`sm:relative shadow-md sm:shadow-none z-20 absolute w-full smoverflow-hidden bg-gradient-to-b ${headerColorCss}`}
     >
       {({ open }) => (
       <>
@@ -208,7 +206,7 @@ export const Header = ({ data }) => {
                     : router.asPath.includes(item.href);
                 return (
                   <Disclosure.Button
-                    key={item.name}
+                    key={item.label}
                     as="a"
                     href={`${prefix}/${item.href}`}
                     className={` select-none text-base text-headerblack hover:opacity-100 hover:bg-gray-700 py-2 px-4 block ${
