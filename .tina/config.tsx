@@ -75,6 +75,18 @@ const config = defineStaticConfig({
             },
           },
           {
+            type: "string",
+            label: "Categorie",
+            name: "category",
+
+          },
+          {
+            type: "string",
+            label: "Tags",
+            name: "tags",
+
+          },
+          {
             type: "rich-text",
             label: "Body",
             name: "_body",
