@@ -5,9 +5,13 @@
       "color": "orange",
       "style": "float"
     },
-    "name": "Tina Starter",
+    "name": "VDV Blog",
     "color": "default",
     "nav": [
+      {
+        "href": "vdv-vandevelde.com",
+        "label": "Boutique"
+      },
       {
         "href": "",
         "label": "Home"
