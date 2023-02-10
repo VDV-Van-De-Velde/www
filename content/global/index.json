@@ -5,7 +5,7 @@
       "color": "orange",
       "style": "float"
     },
-    "name": "Tina Starter",
+    "name": "VDV Blog",
     "color": "default",
     "nav": [
       {
@@ -19,15 +19,19 @@
       {
         "href": "posts",
         "label": "Blog"
+      },
+      {
+        "href": "vdv-vandevelde.com",
+        "label": "Boutique"
       }
     ]
   },
   "footer": {
     "color": "default",
     "social": {
-      "facebook": "/",
+      "facebook": "https://www.facebook.com/vdv.vandevelde",
       "twitter": "/",
-      "instagram": "/"
+      "instagram": "https://www.facebook.com/vdv.vandevelde"
     }
   },
   "theme": {
