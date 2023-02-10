@@ -9,10 +9,6 @@
     "color": "default",
     "nav": [
       {
-        "href": "vdv-vandevelde.com",
-        "label": "Boutique"
-      },
-      {
         "href": "",
         "label": "Home"
       },
@@ -23,6 +19,10 @@
       {
         "href": "posts",
         "label": "Blog"
+      },
+      {
+        "href": "vdv-vandevelde.com",
+        "label": "Boutique"
       }
     ]
   },
