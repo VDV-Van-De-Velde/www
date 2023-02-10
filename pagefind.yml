@@ -1,0 +1,3 @@
+source: out
+bundle_dir: ../public/pagefind
+force_language: fr

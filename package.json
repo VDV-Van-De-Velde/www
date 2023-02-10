@@ -8,15 +8,8 @@
     "start": "tinacms build && next start",
     "export": "npm run build && next export",
     "lint": "eslint . --ext .ts,.tsx"
-    // "dev": "npm run postbuild && tinacms dev --watchFolders='components/util/icon.tsx' -c \"next dev\"",
-    // "build": "tinacms build && next build && next export",
-    // "start": " tinacms build && npm run postbuild && next start",
-    // "export": "npm run build && npm run postbuild && next export",
-    // "lint": "eslint . --ext .ts,.tsx",
-    // "postbuild": "pagefind --bundle-dir ../public/pagefind --source out"
   },
   "devDependencies": {
-    "@pagefind/default-ui": "^0.11.0-rc4",
     "@svgr/webpack": "^6.3.1",
     "@tinacms/cli": "^1.0.3",
     "@types/js-cookie": "^3.0.0",
@@ -34,10 +27,10 @@
   "dependencies": {
     "@headlessui/react": "1.7.5",
     "@heroicons/react": "^2.0.14",
+    "@pagefind/default-ui": "^0.11.0-rc4",
     "@tailwindcss/typography": "^0.5.8",
     "date-fns": "^2.23.0",
     "next": "^12.3.1",
-    "pagefind": "^0.10.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",

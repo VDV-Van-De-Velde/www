@@ -51,7 +51,7 @@ export const Layout = ({ rawData = {}, data = layoutData, children }) => {
             />
           </>
         )}
-        <link href="/_pagefind/pagefind-ui.css" rel="stylesheet" />
+        {/* <link href="/_pagefind/pagefind-ui.css" rel="stylesheet" /> */}
       </Head>
       <Theme data={data?.theme}>
         <div

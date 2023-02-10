@@ -17,7 +17,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "noImplicitAny": false
   },
   "exclude": [
     "node_modules"
@@ -28,5 +29,9 @@
     "**/*.tsx",
     ".forestry/types.ts",
     ".forestry/config.ts"
+  ],
+  "typeRoots": [
+    "../node_modules/@types",
+    "../@types"
   ]
 }
