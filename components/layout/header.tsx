@@ -142,8 +142,9 @@ export const Header = ({ data }) => {
                         activeItem ? activeItemClasses[theme.color] : ""
                       }`}
                     >
-                      <Link href={`${prefix}/${item.href}`} passHref>
+                      <Link href={item.target ? `${prefix}/${item.href}` : item.href} passHref>
                         <a
+                          target= {item.target ? "_self" : "_blank"}
                           className={`relative select-none	text-base inline-block tracking-wide transition duration-150 ease-out hover:opacity-100 py-8 px-4 ${
                             activeItem ? `` : `opacity-70`
                           }`}
@@ -213,7 +214,8 @@ export const Header = ({ data }) => {
                   <Disclosure.Button
                     key={item.label}
                     as="a"
-                    href={`${prefix}/${item.href}`}
+                    href={item.target ? `${prefix}/${item.href}` : item.href}
+                    target= {item.target ? "_self" : "_blank"}
                     className={` select-none text-base text-headerblack hover:opacity-100 hover:bg-gray-700 py-2 px-4 block ${
                       activeItem ? `` : `opacity-70`
                     }`}

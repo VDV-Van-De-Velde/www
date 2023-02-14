@@ -10,19 +10,23 @@
     "nav": [
       {
         "href": "",
-        "label": "Home"
+        "label": "Home",
+        "target": true
       },
       {
         "href": "about",
-        "label": "About"
+        "label": "About",
+        "target": true
       },
       {
         "href": "posts",
-        "label": "Blog"
+        "label": "Blog",
+        "target": true
       },
       {
-        "href": "vdv-vandevelde.com",
-        "label": "Boutique"
+        "href": "https://vdv-vandevelde.com",
+        "label": "Boutique",
+        "target": false
       }
     ]
   },

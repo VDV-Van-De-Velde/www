@@ -211,6 +211,11 @@ const config = defineStaticConfig({
                     label: "Label",
                     name: "label",
                   },
+                  {
+                    type: "boolean",
+                    label: "Lien interne",
+                    name: "target",
+                  },
                 ],
               },
             ],
