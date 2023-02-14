@@ -34,6 +34,15 @@ const components: Components<{
     children: TinaMarkdownContent;
     disclaimer?: TinaMarkdownContent;
   };
+  Youtube: {
+    id: string;
+  };
+  BlockImgText: {
+    position: string;
+    children: TinaMarkdownContent;
+    src: string;
+    alt: string;
+  };
 }> = {
   code_block: (props) => <Prism {...props} />,
   BlockQuote: (props: {
@@ -106,6 +115,16 @@ const components: Components<{
   img: (props) => (
     <div className="flex items-center justify-center">
       <img src={props.url} alt={props.alt} />
+    </div>
+  ),
+  Youtube: (props) => (
+    <div className="embed-responsive embed-responsive-16by9 pt-[56.25%] relative w-full overflow-hidden">
+      <iframe
+        className="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full"
+        src={`https://www.youtube.com/embed/${props.id}`}
+        data-gtm-yt-inspected-2340190_699="true"
+        id="240632615">
+        </iframe>
     </div>
   ),
 };

@@ -121,36 +121,54 @@ const config = defineStaticConfig({
                 ],
               },
               {
-                name: "NewsletterSignup",
-                label: "Newsletter Sign Up",
+                name: "Youtube",
+                label: "Video Youtube",
                 fields: [
                   {
-                    name: "children",
-                    label: "CTA",
-                    type: "rich-text",
-                  },
-                  {
-                    name: "placeholder",
-                    label: "Placeholder",
+                    name: "id",
+                    label: "Identifiant de la video",
                     type: "string",
-                  },
-                  {
-                    name: "buttonText",
-                    label: "Button Text",
-                    type: "string",
-                  },
-                  {
-                    name: "disclaimer",
-                    label: "Disclaimer",
-                    type: "rich-text",
                   },
                 ],
-                ui: {
-                  defaultItem: {
-                    placeholder: "Enter your email",
-                    buttonText: "Notify Me",
+              },
+              {
+                name: "BlockImgText",
+                label: "Section Image et Texte",
+                fields: [
+                  {
+                    name: "position",
+                    label: "Position",
+                    type: "string",
+                    options: [{
+                      value: "left",
+                      label: "Image a Gauche"
+                    }, {
+                      value: "right",
+                      label: "Image a Droite"
+                    }, {
+                      value: "top",
+                      label: "Image en Haut"
+                    }, {
+                      value: "bottom",
+                      label: "Image a Bas"
+                    }]
                   },
-                },
+                  {
+                    name: "children",
+                    label: "Texte",
+                    type: "rich-text",
+                  },
+                  {
+                    name: "src",
+                    label: "Image source",
+                    type: "image",
+                  },
+                  {
+                    name: "alt",
+                    label: "Image titre",
+                    type: "string",
+                  },
+                ],
               },
             ],
             isBody: true,
@@ -170,6 +188,7 @@ const config = defineStaticConfig({
             type: "object",
             label: "Header",
             name: "header",
+            // @ts-ignore
             fields: [
               iconSchema,
               {
