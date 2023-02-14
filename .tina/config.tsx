@@ -121,6 +121,32 @@ const config = defineStaticConfig({
                 ],
               },
               {
+                name: "Gallery",
+                label: "Gallery d'image",
+                fields: [
+                  {
+                    name: "Images",
+                    label: "Images",
+                    type: "object",
+                    list: true,
+                    max: "3",
+                    // @ts-ignore
+                    fields: [
+                      {
+                        label: "Source de l'image",
+                        name: "src",
+                        type: "image"
+                      },
+                      {
+                        label: "titre de l'image",
+                        name: "alt",
+                        type: "string"
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
                 name: "Youtube",
                 label: "Video Youtube",
                 fields: [
