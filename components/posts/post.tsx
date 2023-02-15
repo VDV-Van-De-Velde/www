@@ -124,15 +124,15 @@ const components: Components<{
     <div className="embed-responsive embed-responsive-16by9 pt-[56.25%] relative w-full overflow-hidden">
       <iframe
         className="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full"
-        src={`https://www.youtube.com/embed/${props.id}`}>
+        src={`https://www.youtube-nocookie.com/embed/${props.id}`} >
         </iframe>
     </div>
   ),
   Gallery: (props) =>(
     <div className="container py-8">
       <div className="flex flex-wrap -m-1 md:-m-2">
-        {props.Images?.map(image =>(
-          <div className="flex flex-wrap w-1/3">
+        {props.Images?.map( (image, index )=>(
+          <div key={index} className="flex flex-wrap w-1/3">
             <div className="w-full p-1 md:p-2"> 
               <img alt={image.alt} className="block object-center w-full h-full rounded-lg"
                 src={image.src}/>
