@@ -53,6 +53,8 @@ export const Layout = ({ rawData = {}, data = layoutData, children }) => {
           </>
         )}
         {/* <link href="/_pagefind/pagefind-ui.css" rel="stylesheet" /> */}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-zoom.css" />
       </Head>
       <Theme data={data?.theme}>
         <div

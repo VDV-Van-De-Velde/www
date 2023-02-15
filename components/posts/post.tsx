@@ -20,6 +20,9 @@ import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { Prism } from "tinacms/dist/rich-text/prism";
 import type { TinaMarkdownContent, Components } from "tinacms/dist/rich-text";
 
+import LightGallery from 'lightgallery/react';
+import lgZoom from 'lightgallery/plugins/zoom';
+
 const components: Components<{
   BlockQuote: {
     children: TinaMarkdownContent;
@@ -130,16 +133,20 @@ const components: Components<{
   ),
   Gallery: (props) =>(
     <div className="container py-8">
-      <div className="flex flex-wrap -m-1 md:-m-2">
+      <LightGallery
+          plugins={[lgZoom]}
+      >
         {props.Images?.map( (image, index )=>(
-          <div key={index} className="flex flex-wrap w-1/3">
-            <div className="w-full p-1 md:p-2"> 
-              <img alt={image.alt} className="block object-center w-full h-full rounded-lg"
-                src={image.src}/>
-            </div>
-          </div>
+          <a 
+            key={index}
+            data-lg-size="1400-1400"
+            className="gallery-item w-1/3 inline-block"
+            data-src={image.src}
+          >
+            <img alt={image.alt} className="img-responsive" src={image.src}/>
+          </a>
         ))}
-      </div>
+      </LightGallery>    
     </div>
   )
 };
