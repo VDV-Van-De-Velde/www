@@ -199,40 +199,57 @@ export const Post = (props) => {
           className={`w-full relative	mb-8 text-6xl font-extrabold tracking-normal text-center title-font`}
         >
           <span
-            className={`bg-clip-text text-transparent bg-gradient-to-r ${
-              titleColorClasses[theme.color]
-            }`}
+            className={`bg-clip-text text-gray-900`}
           >
             {props.title}
           </span>
         </h2>
-        <div
-          data-tinafield="author"
-          className="flex items-center justify-center mb-16"
-        >
-          {props.author && (
-            <>
-              <div className="flex-shrink-0 mr-4">
-                <img
-                  className="h-14 w-14 object-cover rounded-full shadow-sm"
-                  src={props.author.avatar}
-                  alt={props.author.name}
-                />
-              </div>
-              <p className="text-base font-medium text-gray-600 group-hover:text-gray-800 dark:text-gray-200 dark:group-hover:text-white">
-                {props.author.name}
-              </p>
-              <span className="font-bold text-gray-200 dark:text-gray-500 mx-2">
-                —
-              </span>
-            </>
-          )}
-          <p
-            data-tinafield="date"
-            className="text-base text-gray-400 group-hover:text-gray-500 dark:text-gray-300 dark:group-hover:text-gray-150"
+        <div className="flex items-center justify-center flex-col mb-16">
+          <div
+            data-tinafield="author"
+            className="flex items-center justify-center "
           >
-            {formattedDate}
-          </p>
+            {props.author && (
+              <>
+                <div className="flex-shrink-0 mr-4">
+                  <img
+                    className="h-14 w-14 object-cover rounded-full shadow-sm"
+                    src={props.author.avatar}
+                    alt={props.author.name}
+                  />
+                </div>
+                <p className="text-base font-medium text-gray-600 group-hover:text-gray-800 dark:text-gray-200 dark:group-hover:text-white">
+                  {props.author.name}
+                </p>
+                <span className="font-bold text-gray-200 dark:text-gray-500 mx-2">
+                  —
+                </span>
+              </>
+            )}
+            <p
+              data-tinafield="date"
+              className="text-base text-gray-400 group-hover:text-gray-500 dark:text-gray-300 dark:group-hover:text-gray-150"
+            >
+              {formattedDate}
+            </p>
+          </div>
+          <div className="flex items-center justify-center mb-2">
+            {props.category &&(
+              <>
+                <p data-tinafield="category" className="text-base font-bold italic text-gray-700">
+                  {props.category.name}
+                </p>
+              </>
+            )}
+          </div>
+          <div className="flex flex-wrap justify-center space-x-2">
+            {props.tags && props.tags.map((tag, index)=>(
+              <span key={index} className="px-4 py-2 rounded-full text-white font-semibold text-sm flex align-center w-max cursor-pointer bg-gray-1000 transition duration-300 ease">
+                {tag}
+              </span>
+            ))}
+            
+          </div>
         </div>
       </Container>
       {props.heroImg && (
