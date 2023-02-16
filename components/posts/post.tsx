@@ -140,7 +140,7 @@ const components: Components<{
           <a 
             key={index}
             data-lg-size="1400-1400"
-            className="gallery-item w-1/3 inline-block"
+            className="gallery-item w-1/3 grow m-3 inline-block"
             data-src={image.src}
           >
             <img alt={image.alt} className="img-responsive" src={image.src}/>

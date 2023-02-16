@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.lg-react-element {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
