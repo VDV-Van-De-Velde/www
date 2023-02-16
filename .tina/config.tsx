@@ -393,7 +393,7 @@ const config = defineStaticConfig({
       {
         label: "Categorie",
         name: "category",
-        path: "content/tags",
+        path: "content/category",
         format: "md",
         fields: [
           {

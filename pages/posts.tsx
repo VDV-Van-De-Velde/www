@@ -12,7 +12,7 @@ export default function HomePage(
   return (
     <Layout>
       <Section className="flex-1">
-        <Container size="large" width="large">
+        <Container size="large" width="large" className="flex flex-wrap">
           <Posts data={posts} />
         </Container>
       </Section>

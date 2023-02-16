@@ -14,6 +14,11 @@ query pageQuery {
         _sys {
           filename
         }
+        category {
+          ... on Category {
+            ...CategoryParts
+          }
+        }
       }
     }
   }
@@ -34,6 +39,11 @@ query blogPostQuery($relativePath: String!) {
       ... on Author {
         name
         avatar
+      }
+    }
+    category {
+       ... on Category {
+        name
       }
     }
   }

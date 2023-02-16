@@ -28,52 +28,64 @@ export const Posts = ({ data }) => {
           formattedDate = format(date, "MMM dd, yyyy");
         }
         return (
-          <Link
-            key={post._sys.filename}
-            href={`/posts/` + post._sys.filename}
-            passHref
-          >
-            <a
-              key={post.id}
-              className="group block px-6 sm:px-8 md:px-10 py-10 mb-8 last:mb-0 bg-gray-50 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-1000 rounded-md shadow-sm transition-all duration-150 ease-out hover:shadow-md hover:to-gray-50 dark:hover:to-gray-800"
-            >
-              <h3
-                className={`text-gray-700 dark:text-white text-3xl lg:text-4xl font-semibold title-font mb-5 transition-all duration-150 ease-out ${
-                  titleColorClasses[theme.color]
-                }`}
+          <div key={post._sys.filename} className="mb-4 grow p-0 sm:p-4 md:w-1/3 max-w-2xl"> {/* Card container */}
+            <div className="group h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-lg">
+            <Link
+                href={`/posts/` + post._sys.filename}
+                passHref
               >
-                {post._values.title}{" "}
-                <span className="inline-block opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out">
-                  <BsArrowRight className="inline-block h-8 -mt-1 ml-1 w-auto opacity-70" />
-                </span>
-              </h3>
-              <div className="prose dark:prose-dark w-full max-w-none mb-5 opacity-70">
-                <TinaMarkdown content={post._values.excerpt} />
-              </div>
-              <div className="flex items-center">
-                <div className="flex-shrink-0 mr-2">
-                  <img
-                    className="h-10 w-10 object-cover rounded-full shadow-sm"
-                    src={post?.author?.avatar}
-                    alt={post?.author?.name}
-                  />
-                </div>
-                <p className="text-base font-medium text-gray-600 group-hover:text-gray-800 dark:text-gray-200 dark:group-hover:text-white">
-                  {post?.author?.name}
-                </p>
-                {formattedDate !== "" && (
-                  <>
-                    <span className="font-bold text-gray-200 dark:text-gray-500 mx-2">
-                      —
+                <a  key={post.id}>
+                  {/* :CARD IMAGE & CATEGORY */}
+                  <div className="relative w-full overflow-hidden">
+                    {/* ::Image */}
+                    {post._values.heroImg && (
+                      <img src={post._values.heroImg} alt={post._values.title} className="w-full h-full object-cover object-center transition-all duration-300 transform group-hover:scale-110"/>
+                    )}
+                    {/* ::Category */}
+                    <h2 className="absolute top-6 left-6 inline-block pt-0.5 pb-1.5 px-2 rounded-md text-sm text-white subpixel-antialiased font-medium bg-gray-900 cursor-pointer">{post?.category?.name}</h2>
+                  </div>
+
+                  {/* :CARD BODY */}
+                  <div className="my-6 py-3 px-8 flex flex-col justify-around items-center">
+                    {/* ::Title */}
+                    <h1 className="title-font text-2xl text-center font-bold text-gray-800 antialiased">{post._values.title}</h1>
+                    {/* ::Excerpt */}
+                    <p className="line-clamp-8 py-5 overflow-hidden leading-relaxed text-sm text-gray-500 text-left font-medium cursor-pointer"><TinaMarkdown content={post._values.excerpt} /></p>
+                    {/* ::RTags*/}
+                    {/* <div className="flex flex-wrap justify-center space-x-2">
+                      {post._values.tags && post._values.tags.map((tag, index)=>(
+                        <span key={index} className="px-4 py-2 rounded-full text-white font-semibold text-sm flex align-center w-max cursor-pointer bg-gray-1000 transition duration-300 ease">
+                          {tag}
+                        </span>
+                      ))}
+                    </div> */}
+                  </div>
+
+                  {/* ::CARD FOOTER */}
+                  <div className="py-3 px-2 flex flex-wrap justify-around border-t border-gray-200">
+                    {/* ::Author */}
+                    <span className="py-0.5 px-1.5 flex items-center text-xs text-gray-500 font-semibold tracking-wide cursor-pointer">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="mr-1 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                      </svg>
+                      {post?.author?.name}
                     </span>
-                    <p className="text-base text-gray-400 group-hover:text-gray-500 dark:text-gray-300 dark:group-hover:text-gray-150">
-                      {formattedDate}
-                    </p>
-                  </>
-                )}
-              </div>
-            </a>
-          </Link>
+                    {/* ::Date */}
+                    {formattedDate !== "" && (
+                      <>
+                        <span className="py-0.5 px-1.5 flex items-center text-xs text-gray-500 font-semibold tracking-wide">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="mr-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                          {formattedDate}
+                        </span>
+                      </>
+                    )}
+                  </div>
+                  </a>
+                </Link> 
+            </div>
+          </div>
         );
       })}
     </>
