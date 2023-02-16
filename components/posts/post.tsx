@@ -182,6 +182,7 @@ export const Post = (props) => {
       <Container width="large" className={`flex-1 pb-2`} size="large">
         <h2
           data-tinafield="title"
+          data-pagefind-meta="title"
           className={`w-full relative	mb-8 text-6xl font-extrabold tracking-normal text-center title-font`}
         >
           <span
@@ -204,7 +205,7 @@ export const Post = (props) => {
                     alt={props.author.name}
                   />
                 </div>
-                <p className="text-base font-medium text-gray-600 group-hover:text-gray-800 dark:text-gray-200 dark:group-hover:text-white">
+                <p data-pagefind-filter="author" className="text-base font-medium text-gray-600 group-hover:text-gray-800 dark:text-gray-200 dark:group-hover:text-white">
                   {props.author.name}
                 </p>
                 <span className="font-bold text-gray-200 dark:text-gray-500 mx-2">
@@ -213,6 +214,7 @@ export const Post = (props) => {
               </>
             )}
             <p
+              data-pagefind-meta="date"
               data-tinafield="date"
               className="text-base text-gray-400 group-hover:text-gray-500 dark:text-gray-300 dark:group-hover:text-gray-150"
             >
@@ -222,7 +224,7 @@ export const Post = (props) => {
           <div className="flex items-center justify-center mb-2">
             {props.category &&(
               <>
-                <p data-tinafield="category" className="text-base font-bold italic text-gray-700">
+                <p data-pagefind-meta="Category" data-tinafield="category" className="text-base font-bold italic text-gray-700">
                   {props.category.name}
                 </p>
               </>
@@ -230,7 +232,7 @@ export const Post = (props) => {
           </div>
           <div className="flex flex-wrap justify-center space-x-2">
             {props.tags && props.tags.map((tag, index)=>(
-              <span key={index} className="px-4 py-2 rounded-full text-white font-semibold text-sm flex align-center w-max cursor-pointer bg-gray-1000 transition duration-300 ease">
+              <span key={index} data-pagefind-meta="Tags" className="px-4 py-2 rounded-full text-white font-semibold text-sm flex align-center w-max cursor-pointer bg-gray-1000 transition duration-300 ease">
                 {tag}
               </span>
             ))}
@@ -245,6 +247,7 @@ export const Post = (props) => {
             className="relative max-w-6xl lg:max-w-5xl mx-auto"
           >
             <img
+              data-pagefind-meta="image[src]"
               src={props.heroImg}
               className="absolute block rounded-lg w-full h-auto blur-2xl brightness-150 contrast-[0.9] dark:brightness-150 saturate-200 opacity-50 dark:opacity-30 mix-blend-multiply dark:mix-blend-hard-light"
               aria-hidden="true"
@@ -258,7 +261,7 @@ export const Post = (props) => {
         </div>
       )}
       <Container className={`flex-1 pt-4`} width="large" size="large">
-        <div className="prose dark:prose-dark w-full max-w-none">
+        <div data-pagefind-body className="prose dark:prose-dark w-full max-w-none">
           <TinaMarkdown components={components} content={props._body} />
         </div>
       </Container>

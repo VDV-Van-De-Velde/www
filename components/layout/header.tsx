@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Script from 'next/script'
-import { PagefindUI } from "@pagefind/default-ui/npm_dist/mjs/ui-core.mjs";
 import { useRouter } from "next/router";
 import { Container } from "../util/container";
 import { useTheme } from ".";
