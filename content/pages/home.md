@@ -16,7 +16,7 @@ blocks:
       - label: Read Blog
         type: link
         icon: false
-        link: /posts
+        link: /posts/anotherPost
     image:
       src: /uploads/unsplash-lylCw4zcA7I.jpg
       alt: >-

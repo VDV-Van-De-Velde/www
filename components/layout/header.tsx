@@ -8,6 +8,7 @@ import { useTheme } from ".";
 import { Icon } from "../util/icon";
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useEffect } from "react";
 
 export const Header = ({ data }) => {
   const router = useRouter();
@@ -27,6 +28,14 @@ export const Header = ({ data }) => {
       yellow: "text-white from-yellow-400 to-yellow-500",
     },
   };
+
+  useEffect(() => {
+    // @ts-ignore
+    if (window.PagefindUI) {
+      // @ts-ignore
+      new window.PagefindUI({ element: "#search" });
+    }
+  }, []);
 
   const headerColorCss =
     data.color === "primary"
@@ -124,9 +133,18 @@ export const Header = ({ data }) => {
               </div>
             </div>
             {/* fin Icon */}
-            {/* <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
-            <Script id="PagefindUI" src="/pagefind/pagefind-ui.js" onReady={()=> {new PagefindUI({ element: '#search', showImages: false })}}/>
-            <div id="search" className="ml-3 p-4"></div> */}
+            <div id="search" className="max-h-screen overflow-auto ml-3 p-4"></div>
+            <link href="./pagefind/pagefind-ui.css" rel="stylesheet" type="text/css" />
+            <Script
+              src="./pagefind/pagefind-ui.js"
+              onLoad={() => {
+                // @ts-ignore
+                if (window.PagefindUI) {
+                  // @ts-ignore
+                  new window.PagefindUI({ element: "#search" });
+                }
+              }}
+            />
             <ul className="gap-6 sm:gap-8 lg:gap-10 tracking-[.002em] -mx-4 hidden sm:flex">
               <div className="flex space-x-4">
                 {data.nav &&

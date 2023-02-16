@@ -7,7 +7,8 @@
     "build": "tinacms build && next build",
     "start": "tinacms build && next start",
     "export": "npm run build && next export",
-    "lint": "eslint . --ext .ts,.tsx"
+    "lint": "eslint . --ext .ts,.tsx",
+    "indexed": "pagefind --source out"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.3.1",
@@ -34,6 +35,7 @@
     "lightgallery": "^2.7.1",
     "next": "^12.3.1",
     "next-share": "^0.19.0",
+    "pagefind": "^0.11.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
