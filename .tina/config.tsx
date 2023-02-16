@@ -44,7 +44,7 @@ const config = defineStaticConfig({
         fields: [
           {
             type: "string",
-            label: "Title",
+            label: "Titre",
             name: "title",
             isTitle: true,
             required: true,
@@ -52,11 +52,11 @@ const config = defineStaticConfig({
           {
             type: "image",
             name: "heroImg",
-            label: "Hero Image",
+            label: "Image",
           },
           {
             type: "rich-text",
-            label: "Excerpt",
+            label: "Description",
             name: "excerpt",
           },
           {
@@ -75,15 +75,19 @@ const config = defineStaticConfig({
             },
           },
           {
-            type: "string",
+            type: "reference",
             label: "Categorie",
             name: "category",
-
+            collections: ["category"],
           },
           {
             type: "string",
             label: "Tags",
             name: "tags",
+            list: true,
+            ui : {
+              component: "tags",
+            },
 
           },
           {
@@ -115,7 +119,7 @@ const config = defineStaticConfig({
                   },
                   {
                     name: "authorName",
-                    label: "Author",
+                    label: "Autheur",
                     type: "string",
                   },
                 ],
@@ -383,6 +387,21 @@ const config = defineStaticConfig({
             type: "string",
             label: "Avatar",
             name: "avatar",
+          },
+        ],
+      },
+      {
+        label: "Categorie",
+        name: "category",
+        path: "content/tags",
+        format: "md",
+        fields: [
+          {
+            type: "string",
+            label: "Name",
+            name: "name",
+            isTitle: true,
+            required: true,
           },
         ],
       },
