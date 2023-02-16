@@ -147,6 +147,25 @@ const components: Components<{
         ))}
       </LightGallery>    
     </div>
+  ),
+  BlockImgText: (props) => (
+    <Container
+        size="large"
+        className={`flex flex-wrap items-center justify-center ${props.position === "left" ? "flex-row-reverse":"flex-row"}`}
+      >
+        <div className="">
+            <div className={`prose prose-lg mx-auto lg:mx-0 mb-10`}>
+              <TinaMarkdown content={props.children} />
+            </div>
+        </div>
+        <div className=" max-w-1/3 flex justify-center" >
+          <img
+            className=" z-10 w-full rounded-lg lg:max-w-sm max-w-none h-auto"
+            alt={props.alt}
+            src={props.src}
+          />
+        </div>
+      </Container>
   )
 };
 
@@ -174,7 +193,7 @@ export const Post = (props) => {
 
   return (
     <Section className="flex-1">
-      <Container width="small" className={`flex-1 pb-2`} size="large">
+      <Container width="large" className={`flex-1 pb-2`} size="large">
         <h2
           data-tinafield="title"
           className={`w-full relative	mb-8 text-6xl font-extrabold tracking-normal text-center title-font`}
@@ -220,7 +239,7 @@ export const Post = (props) => {
         <div className="px-4 w-full">
           <div
             data-tinafield="heroImg"
-            className="relative max-w-4xl lg:max-w-5xl mx-auto"
+            className="relative max-w-6xl lg:max-w-5xl mx-auto"
           >
             <img
               src={props.heroImg}
@@ -235,7 +254,7 @@ export const Post = (props) => {
           </div>
         </div>
       )}
-      <Container className={`flex-1 pt-4`} width="small" size="large">
+      <Container className={`flex-1 pt-4`} width="large" size="large">
         <div className="prose dark:prose-dark w-full max-w-none">
           <TinaMarkdown components={components} content={props._body} />
         </div>

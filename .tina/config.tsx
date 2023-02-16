@@ -171,12 +171,6 @@ const config = defineStaticConfig({
                     }, {
                       value: "right",
                       label: "Image a Droite"
-                    }, {
-                      value: "top",
-                      label: "Image en Haut"
-                    }, {
-                      value: "bottom",
-                      label: "Image a Bas"
                     }]
                   },
                   {
