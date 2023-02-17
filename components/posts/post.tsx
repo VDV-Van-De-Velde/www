@@ -183,6 +183,7 @@ export const Post = (props) => {
         <h2
           data-tinafield="title"
           data-pagefind-meta="title"
+          data-pagefind-index-attrs="title"
           className={`w-full relative	mb-8 text-6xl font-extrabold tracking-normal text-center title-font`}
         >
           <span
@@ -205,7 +206,7 @@ export const Post = (props) => {
                     alt={props.author.name}
                   />
                 </div>
-                <p data-pagefind-filter="author" className="text-base font-medium text-gray-600 group-hover:text-gray-800 dark:text-gray-200 dark:group-hover:text-white">
+                <p data-pagefind-meta="author" data-pagefind-index-attrs="author" className="text-base font-medium text-gray-600 group-hover:text-gray-800 dark:text-gray-200 dark:group-hover:text-white">
                   {props.author.name}
                 </p>
                 <span className="font-bold text-gray-200 dark:text-gray-500 mx-2">
@@ -224,7 +225,7 @@ export const Post = (props) => {
           <div className="flex items-center justify-center mb-2">
             {props.category &&(
               <>
-                <p data-pagefind-meta="Category" data-tinafield="category" className="text-base font-bold italic text-gray-700">
+                <p data-pagefind-meta="Category" data-pagefind-index-attrs="Category" data-tinafield="category" className="text-base font-bold italic text-gray-700">
                   {props.category.name}
                 </p>
               </>
@@ -232,7 +233,7 @@ export const Post = (props) => {
           </div>
           <div className="flex flex-wrap justify-center space-x-2">
             {props.tags && props.tags.map((tag, index)=>(
-              <span key={index} data-pagefind-meta="Tags" className="px-4 py-2 rounded-full text-white font-semibold text-sm flex align-center w-max cursor-pointer bg-gray-1000 transition duration-300 ease">
+              <span key={index} data-pagefind-meta="Tags" data-pagefind-index-attrs="Tags" className="px-4 py-2 rounded-full text-white font-semibold text-sm flex align-center w-max cursor-pointer bg-gray-1000 transition duration-300 ease">
                 {tag}
               </span>
             ))}

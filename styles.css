@@ -8,3 +8,24 @@
     align-items: center;
     justify-content: space-around;
 }
+
+.pagefin-ui {
+    overflow-x: hidden;
+}
+.pagefind-ui__drawer {
+    background-color: white;
+    border-radius: var(--pagefind-ui-border-radius);
+}
+#search{
+    min-width:12rem;
+    align-items:flex-start!important;
+}
+.pagefind-ui__filter-panel-label{
+    display: none!important;
+}
+.pagefind-ui__filter-panel{
+    display: none!important;
+}
+.pagefind-ui__result {
+    border-bottom: none!important;
+}

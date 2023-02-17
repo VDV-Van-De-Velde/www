@@ -57,8 +57,8 @@ module.exports = {
       },
     },
     screens: {
-      sm: "600px",
-      md: "900px",
+      sm: "800px",
+      md: "1000px",
       lg: "1200px",
       xl: "1500px",
       "2xl": "1800px",
@@ -233,5 +233,6 @@ module.exports = {
     require("@tailwindcss/typography"),
     require('tw-elements/dist/plugin'),
     require('@tailwindcss/line-clamp'),
+    require('flowbite/plugin'),
 ],
 };

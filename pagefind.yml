@@ -1,3 +1,5 @@
 source: out
 bundle_dir: ../public/pagefind
 force_language: fr
+verbose: true
+serve: false # This will generate a local URL to test at
