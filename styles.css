@@ -1,3 +1,4 @@
+@import "/public/pagefind/pagefind-ui.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,8 +14,8 @@
     overflow-x: hidden;
 }
 .pagefind-ui__drawer {
-    background-color: white;
-    border-radius: var(--pagefind-ui-border-radius);
+    background-color: white!important;
+    border-radius: var(--pagefind-ui-border-radius)!important;
 }
 #search{
     min-width:12rem;
