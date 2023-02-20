@@ -56,10 +56,6 @@ export const Layout = ({ rawData = {}, data = layoutData, children }) => {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-zoom.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js" type="text/javascript"></script>
-        <script
-          src="/pagefind/pagefind-ui.js"
-          type="text/javascript"
-        ></script>
       </Head>
       <Theme data={data?.theme}>
         <div
