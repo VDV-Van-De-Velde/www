@@ -14,8 +14,8 @@ export const Posts = ({ data }) => {
           formattedDate = format(date, "MMM dd, yyyy");
         }
         return (
-          <div className="mb-4 grow p-0 sm:p-4 md:w-1/3 max-w-2xl"> {/* Card container */}
-            <div className="group h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-lg">
+          <div key={post.id} className="mb-4 grow p-0 sm:p-4 md:w-1/3 max-w-2xl"> {/* Card container */}
+            <div key={post.id} className="group h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-lg">
             <Link
                 key={post.id}
                 href={`/posts/` + post._sys.filename}
@@ -38,7 +38,7 @@ export const Posts = ({ data }) => {
                     {/* ::Title */}
                     <h1 className="title-font text-2xl text-center font-bold text-gray-800 antialiased" >{post._values.title}</h1>
                     {/* ::Excerpt */}
-                    <p className="line-clamp-8 py-5 overflow-hidden leading-relaxed text-sm text-gray-500 text-left font-medium cursor-pointer"><TinaMarkdown content={post._values.excerpt} /></p>
+                    <div className="line-clamp-8 py-5 overflow-hidden leading-relaxed text-sm text-gray-500 text-left font-medium cursor-pointer"><TinaMarkdown content={post._values.excerpt} /></div>
                     {/* ::RTags*/}
                     {/* <div className="flex flex-wrap justify-center space-x-2">
                       {post._values.tags && post._values.tags.map((tag, index)=>(

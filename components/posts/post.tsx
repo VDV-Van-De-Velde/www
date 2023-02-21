@@ -120,10 +120,10 @@ const components: Components<{
     );
   },
   img: (props) => (
-    <div className="flex items-center justify-center">
+    <span className="flex items-center justify-center">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={props.url} alt={props.alt} />
-    </div>
+    </span>
   ),
   Youtube: (props) => (
     <div className="embed-responsive embed-responsive-16by9 pt-[56.25%] relative w-full overflow-hidden">

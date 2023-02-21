@@ -7,19 +7,16 @@ import { Icon } from "../util/icon";
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Script from "next/script";
-import type { ModalOptions, ModalInterface } from 'flowbite'
+import { ModalOptions } from "flowbite/lib/esm/components/modal/types";
 
 export const Header = ({ data }) => {
   const router = useRouter();
   const theme = useTheme();
-
   const modalOptions: ModalOptions = {
     backdrop: 'dynamic',
-    backdropClasses: 'bg-gray-900 bg-opacity-50 fixed inset-0 z-9',
+    backdropClasses: 'bg-gray-900 bg-opacity-50 fixed inset-0 z-11',
     closable: true,
-}
-
-
+  }
   const headerColor = {
     default:
       "text-black dark:text-white from-gray-50 to-white dark:from-gray-800 dark:to-gray-900",
@@ -73,9 +70,9 @@ export const Header = ({ data }) => {
     if (window && window.location.pathname.startsWith("/admin")) {
       setPrefix("/admin");
     } 
-    if (window.PagefindUI) {
-      new window.PagefindUI({ element: "#search" });
-    }
+    // if (window.PagefindUI) {
+    //   new window.PagefindUI({ element: "#search" });
+    // }
   }, []);
 
   return (
@@ -84,7 +81,7 @@ export const Header = ({ data }) => {
     >
       {({ open }) => (
       <>
-        <Container size="custom" className="py-0 relative z-10 max-w-8xl">
+        <Container size="custom" className="py-0 relative z-8 max-w-8xl">
           {/* Menu pleine ecran */}
           <div className="flex items-center justify-between gap-6">
             {/* Burger menu */}
@@ -134,8 +131,23 @@ export const Header = ({ data }) => {
               </div>
             </div>
             {/* fin Icon */}
-            <button data-modal-target="search" data-modal-toggle="search" className="block opacity-70 hover:opacity-100 text-white focus:ring-4  font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M12.7549 11.255H11.9649L11.6849 10.985C12.6649 9.845 13.2549 8.365 13.2549 6.755C13.2549 3.165 10.3449 0.255005 6.75488 0.255005C3.16488 0.255005 0.254883 3.165 0.254883 6.755C0.254883 10.345 3.16488 13.255 6.75488 13.255C8.36488 13.255 9.84488 12.665 10.9849 11.685L11.2549 11.965V12.755L16.2549 17.745L17.7449 16.255L12.7549 11.255ZM6.75488 11.255C4.26488 11.255 2.25488 9.245 2.25488 6.755C2.25488 4.26501 4.26488 2.255 6.75488 2.255C9.24488 2.255 11.2549 4.26501 11.2549 6.755C11.2549 9.245 9.24488 11.255 6.75488 11.255Z" fill="#000000"/></svg>
+            <button 
+              data-modal-target="search" 
+              data-modal-toggle="search" 
+              className="block opacity-70 hover:opacity-100 text-white focus:ring-4  font-medium rounded-lg text-sm px-5 py-2.5 text-center" 
+              type="button"
+              onClick={(e)=>{
+                if (window.PagefindUI && document.getElementsByClassName("pagefind-ui").length == 0) {
+                  new window.PagefindUI({ element: "#search" });
+                }
+                console.log(e);
+              }}
+              onError={(e) => {
+                console.error('Script failed to load', e)
+              }}
+            >
+            
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M12.7549 11.255H11.9649L11.6849 10.985C12.6649 9.845 13.2549 8.365 13.2549 6.755C13.2549 3.165 10.3449 0.255005 6.75488 0.255005C3.16488 0.255005 0.254883 3.165 0.254883 6.755C0.254883 10.345 3.16488 13.255 6.75488 13.255C8.36488 13.255 9.84488 12.665 10.9849 11.685L11.2549 11.965V12.755L16.2549 17.745L17.7449 16.255L12.7549 11.255ZM6.75488 11.255C4.26488 11.255 2.25488 9.245 2.25488 6.755C2.25488 4.26501 4.26488 2.255 6.75488 2.255C9.24488 2.255 11.2549 4.26501 11.2549 6.755C11.2549 9.245 9.24488 11.255 6.75488 11.255Z" fill="#000000"/></svg>
             </button>
             <div id="search" className="fixed mt-24 top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full" >
             <Script 

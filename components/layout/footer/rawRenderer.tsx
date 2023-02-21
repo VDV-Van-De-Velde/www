@@ -30,7 +30,7 @@ export const RawRenderer = ({ rawData, parentColor }) => {
       <button
         type="button"
         onClick={openModal}
-        className={`z-10 relative flex items-center px-5 py-2 mx-3 my-2 font-semibold shadow-sm text-sm transition duration-150 ease-out rounded transform focus:shadow-outline focus:outline-none whitespace-nowrap opacity-80 hover:opacity-100 shadow-md ${
+        className={`z-8 relative flex items-center px-5 py-2 mx-3 my-2 font-semibold shadow-sm text-sm transition duration-150 ease-out rounded transform focus:shadow-outline focus:outline-none whitespace-nowrap opacity-80 hover:opacity-100 shadow-md ${
           buttonColorClasses[theme.color]
         }`}
       >
@@ -46,7 +46,7 @@ export const RawRenderer = ({ rawData, parentColor }) => {
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
           as="div"
-          className="fixed inset-0 z-10 overflow-y-auto"
+          className="fixed inset-0 z-8 overflow-y-auto"
           onClose={closeModal}
         >
           <div className="min-h-screen max-h-screen px-4 py-12 text-center flex flex-col items-center justify-center">

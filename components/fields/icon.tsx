@@ -61,7 +61,7 @@ export const IconPickerInput = wrapFieldsWithMeta(({ input }) => {
                 <Popover.Panel className="relative overflow-hidden rounded-lg shadow-lg bg-white border border-gray-150 z-50">
                   {({ close }) => (
                     <div className="max-h-[24rem] flex flex-col w-full h-full">
-                      <div className="bg-gray-50 p-2 border-b border-gray-100 z-10 shadow-sm">
+                      <div className="bg-gray-50 p-2 border-b border-gray-100 z-8 shadow-sm">
                         <input
                           type="text"
                           className="bg-white text-sm rounded-sm border border-gray-100 shadow-inner py-1.5 px-2.5 w-full block placeholder-gray-200"
