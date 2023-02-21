@@ -47,7 +47,7 @@ export const Footer = ({ data, icon }) => {
         <div className="flex justify-between items-center gap-6 flex-wrap">
           <Link href="/" passHref>
             <a className="group mx-2 flex items-center font-bold tracking-tight text-gray-400 dark:text-gray-300 opacity-50 hover:opacity-100 transition duration-150 ease-out whitespace-nowrap">
-              <Icon
+              {/* <Icon
                 parentColor={data.color}
                 data={{
                   name: icon.name,
@@ -55,6 +55,11 @@ export const Footer = ({ data, icon }) => {
                   style: icon.style,
                 }}
                 className="inline-block h-10 w-auto group-hover:text-orange-500"
+              /> */}
+              <img 
+                className="max-h-10"
+                src="/uploads/logo.jpg"
+                alt="VDV Van De Velde Blog"
               />
             </a>
           </Link>
