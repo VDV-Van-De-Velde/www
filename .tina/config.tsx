@@ -302,6 +302,16 @@ const config = defineStaticConfig({
                     label: "Github",
                     name: "github",
                   },
+                  {
+                    type: "string",
+                    label: "Pinterest",
+                    name: "pinterest",
+                  },
+                  {
+                    type: "string",
+                    label: "Youtube",
+                    name: "youtube",
+                  },
                 ],
               },
             ],

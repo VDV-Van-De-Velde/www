@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from 'next/image'
 import { useRouter } from "next/router";
 import { Container } from "../util/container";
 import { useTheme } from ".";
@@ -103,7 +104,12 @@ export const Header = ({ data }) => {
                 <h4 className="select-none text-lg font-bold tracking-tight my-4 transition duration-150 ease-out transform">
                   <Link href="/" passHref className="block h-8 w-auto lg:hidden">
                     <a className=" gap-1 items-center whitespace-nowrap h-8 w-auto tracking-[.002em] flex lg:hidden">
-                      <Icon
+                    <img 
+                    className="max-h-10"
+                        src="/uploads/logo.jpg"
+                        alt="VDV Van De Velde Blog"
+                      />
+                      {/* <Icon
                         parentColor={data.color}
                         data={{
                           name: data.icon.name,
@@ -111,12 +117,17 @@ export const Header = ({ data }) => {
                           style: data.icon.style,
                         }}
                       />
-                      {data.name}
+                      {data.name} */}
                     </a>
                   </Link>
                   <Link href="/" passHref className="hidden h-8 w-auto lg:block">
                     <a className=" gap-1 items-center whitespace-nowrap h-8 w-auto tracking-[.002em] hidden lg:flex">
-                      <Icon
+                      <img 
+                      className="max-h-10"
+                        src="/uploads/logo.jpg"
+                        alt="VDV Van De Velde Blog"
+                      />
+                      {/* <Icon
                         parentColor={data.color}
                         data={{
                           name: data.icon.name,
@@ -124,7 +135,7 @@ export const Header = ({ data }) => {
                           style: data.icon.style,
                         }}
                       />
-                      {data.name}
+                      {data.name} */}
                     </a>
                   </Link>
                 </h4>

@@ -9,7 +9,7 @@ export const Layout = ({ rawData = {}, data = layoutData, children }) => {
   return (
     <>
       <Head>
-        <title>Tina</title>
+        <title>VDV Van De Velde Blog</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
         {data.theme.font === "nunito" && (
@@ -72,7 +72,6 @@ export const Layout = ({ rawData = {}, data = layoutData, children }) => {
             {children}
           </div>
           <Footer
-            rawData={rawData}
             data={data?.footer}
             icon={data?.header.icon}
           />
