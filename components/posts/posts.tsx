@@ -21,7 +21,7 @@ export const Posts = ({ data }) => {
                 href={`/posts/` + post._sys.filename}
                 passHref
               >
-                <a key={post.id}>
+                <a key={post.id} className="h-full flex flex-col justify-between">
                   {/* :CARD IMAGE & CATEGORY */}
                   <div className="relative w-full overflow-hidden">
                     {/* ::Image */}

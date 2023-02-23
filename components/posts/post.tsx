@@ -120,10 +120,11 @@ const components: Components<{
     );
   },
   img: (props) => (
-    <span className="flex items-center justify-center">
+    <figure>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={props.url} alt={props.alt} />
-    </span>
+      {props.caption === null ? "" : <figcaption className="text-center">Fig - {props.caption}</figcaption>}
+    </figure>
   ),
   Youtube: (props) => (
     <div className="embed-responsive embed-responsive-16by9 pt-[56.25%] relative w-full overflow-hidden">
@@ -143,9 +144,13 @@ const components: Components<{
             key={index}
             className="gallery-item w-1/3 grow m-3 inline-block"
             data-src={image.src}
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img alt={image.alt} className="img-responsive" src={image.src}/>
+          > 
+            <figure className="img-responsive">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img alt={image.alt} className="img-responsive" src={image.src} />
+              {image.caption ? <figcaption className="text-center">Fig - {image.alt}</figcaption> : ""}
+            
+            </figure>
           </a>
         ))}
       </LightGallery>    
@@ -272,7 +277,7 @@ export const Post = (props) => {
       )}
       
       <Container data-pagefind-body className={`flex-1 pt-4`} width="large" size="large">
-        <div  className="prose dark:prose-dark w-full max-w-none">
+        <div  className="prose dark:prose-dark w-full max-w-none h1-center">
           <TinaMarkdown components={components} content={props._body} />
         </div>
       </Container>

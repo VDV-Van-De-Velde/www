@@ -1,52 +1,46 @@
 ---
-title: Tina Cloud Starter
+title: 'VDV Van De Velde: Blog'
 blocks:
-  - headline: Welcome to the Tina Starter
-    text: >
-      This project is set up to show you the basics of working with Tina. You're
-      looking at the landing page, which pulls content from
-      content/pages/home.md, components from components/blocks, and puts them
-      all together in pages/\[filename].tsx, all based on a schema defined in
-      .tina/schema.ts.
+  - tagline: blog
+    headline: Bienvenue sur le Blog de VDV Van De Velde
+    text: "Apprenez à vous occuper de votre animal pour lui garantir une bonne santé grâce à notre guide et conseils par\_VDV Van de Velde.\n"
     actions:
-      - label: Get Started
+      - label: Nos Blogs
         type: button
         icon: true
         link: /posts
-      - label: Read Blog
-        type: link
-        icon: false
-        link: /posts/anotherPost
     image:
-      src: /uploads/unsplash-lylCw4zcA7I.jpg
-      alt: >-
-        Photo of palm trees at sunset by Adam Birkett -
-        unsplash.com/photos/75EFpyXu3Wg
+      src: /uploads/bloc-chiens-570x607.jpg
+      alt: 'Image Blog '
     color: default
     _template: hero
   - items:
       - icon:
-          name: BiCodeBlock
-          color: red
+          name: BiAnalyse
+          color: blue
           style: float
-        title: Amazing Feature
+        title: Des guides
         text: >-
-          Aliquam blandit felis rhoncus, eleifend ipsum in, condimentum nibh.
-          Praesent ac faucibus risus, eu lacinia enim.
+          Comment prendre soin de son animal de compagnie? Avec le Guide de
+          toilettage de VDV Van de Velde, vos animaux n'auront plus aucun secret
+          pour vous.
       - icon:
-          name: BiLike
-          color: primary
-          style: float
-        title: This Is a Feature
-        text: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.
-      - icon:
-          name: BiPalette
+          name: BiBone
           color: green
           style: float
-        title: Configurable Theme
+        title: Comportement
         text: >-
-          Edit global theme configuration with Tina. Change your theme's primary
-          color, font, or icon set.
+          Comment accueillir son animal de compagnie ? La sécurité. Un moyen de
+          transport. Ses habitudes.
+      - icon:
+          name: BiBookHeart
+          color: blue
+          style: float
+        title: Nos conseils de toilettage
+        text: >-
+          Des astuces et conseils pour l'entretien et le toilettage de votre
+          chien, démêler, éliminer les poils morts, nettoyer les oreilles,
+          couper les ongles, etc.
     color: tint
     _template: features
 ---

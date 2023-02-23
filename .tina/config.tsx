@@ -134,6 +134,11 @@ const config = defineStaticConfig({
                     type: "object",
                     list: true,
                     max: "3",
+                    ui: {
+                      itemProps: (item) => {
+                        return { label: `${item?.alt} `}
+                      },
+                    },
                     // @ts-ignore
                     fields: [
                       {
@@ -146,9 +151,30 @@ const config = defineStaticConfig({
                         name: "alt",
                         type: "string"
                       },
+                      {
+                        label: "Libellé",
+                        name: "caption",
+                        type: "boolean"
+                      },
                     ],
                   },
                 ],
+              },
+              {
+                name: "imgWithoutTitle",
+                label: "Image Sans Titre",
+                fields: [
+                  {
+                    name: "src",
+                    label: "Source",
+                    type: "image",
+                  },
+                  {
+                    name: "alt",
+                    label: "Titre",
+                    type: "string",
+                  },
+                ]
               },
               {
                 name: "Youtube",
