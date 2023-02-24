@@ -37,3 +37,10 @@
 .h1-center > h1,h2  {
     text-align: center;
 }
+.socialbtn > button {
+    display: flex;
+    align-items: center;
+}
+.socialbtn > button > svg {
+    margin: 0.2rem;
+}

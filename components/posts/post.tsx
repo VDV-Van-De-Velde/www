@@ -22,6 +22,7 @@ import type { TinaMarkdownContent, Components } from "tinacms/dist/rich-text";
 import LightGallery from 'lightgallery/react';
 import lgZoom from 'lightgallery/plugins/zoom';
 import { useRouter } from "next/router";
+import { SocialShare } from "../util/share";
 
 
 const components: Components<{
@@ -281,6 +282,9 @@ export const Post = (props) => {
           <TinaMarkdown components={components} content={props._body} />
         </div>
       </Container>
+      <SocialShare data={props} path={`https://www.blog.vdv-vandevelde.com${router.asPath}`}        />
+
     </Section>
+    
   );
 };

@@ -4,9 +4,8 @@ import { FaFacebook, FaGithub, FaPinterest, FaTwitter, FaYoutube } from "react-i
 import { AiFillInstagram } from "react-icons/ai";
 import { Container } from "../../util/container";
 import { useTheme } from "..";
-import { Icon } from "../../util/icon";
 
-export const Footer = ({ data, icon }) => {
+export const Footer = ({ data }) => {
   const theme = useTheme();
   const socialIconClasses = "h-7 w-auto";
   const socialIconColorClasses = {
