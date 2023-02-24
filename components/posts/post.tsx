@@ -282,8 +282,7 @@ export const Post = (props) => {
           <TinaMarkdown components={components} content={props._body} />
         </div>
       </Container>
-      <SocialShare data={props} path={`https://www.blog.vdv-vandevelde.com${router.asPath}`}        />
-
+      <SocialShare data={props} path={`https://www.blog.vdv-vandevelde.com${router.asPath}`} />
     </Section>
     
   );

@@ -9,7 +9,7 @@
     "export": "npm run build && next export && pagefind --source out && npm run copy",
     "lint": "eslint . --ext .ts,.tsx",
     "indexed": " pagefind --source out",
-    "copy": "mkdirp -p ./out/pagefind/ && mkdirp -p ./out/pagefind/index/ && mkdirp -p ./out/pagefind/fragment/ && deepcopy \"public/pagefind\" \"out/pagefind/\" || cp --recursive public/pagefind/ out/"
+    "copy": "mkdirp -p ./out/pagefind/ && mkdirp -p ./out/pagefind/index/ && mkdirp -p ./out/pagefind/fragment/ && cp --recursive public/pagefind/ out/"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.1.6",
