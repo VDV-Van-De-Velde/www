@@ -1,15 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
-import Image from 'next/image'
 import { useRouter } from "next/router";
 import { Container } from "../util/container";
 import { useTheme } from ".";
-import { Icon } from "../util/icon";
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Script from "next/script";
-import { ModalOptions } from "flowbite/lib/esm/components/modal/types";
-import { ModalInterface } from "flowbite";
+import { Modal, ModalInterface, ModalOptions } from "flowbite";
 
 export const Header = ({ data }) => {
   const router = useRouter();
