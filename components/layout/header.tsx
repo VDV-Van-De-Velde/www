@@ -9,15 +9,12 @@ import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Script from "next/script";
 import { ModalOptions } from "flowbite/lib/esm/components/modal/types";
+import { ModalInterface } from "flowbite";
 
 export const Header = ({ data }) => {
   const router = useRouter();
   const theme = useTheme();
-  const modalOptions: ModalOptions = {
-    backdrop: 'dynamic',
-    backdropClasses: 'bg-gray-900 bg-opacity-50 fixed inset-0 z-11',
-    closable: true,
-  }
+  
   const headerColor = {
     default:
       "text-black dark:text-white from-gray-50 to-white dark:from-gray-800 dark:to-gray-900",
@@ -74,6 +71,17 @@ export const Header = ({ data }) => {
     // if (window.PagefindUI) {
     //   new window.PagefindUI({ element: "#search" });
     // }
+    const $buttonElement: HTMLElement = document.querySelector('#searchbtn');
+    const $modalElement: HTMLElement = document.querySelector('#search');
+    const modalOptions: ModalOptions = {
+      backdrop: 'dynamic',
+      backdropClasses: 'bg-gray-900 bg-opacity-50 fixed inset-0 z-11',
+      closable: true,
+    }
+    if ($modalElement) {
+      const modal: ModalInterface = new Modal($modalElement, modalOptions);
+      $buttonElement.addEventListener('click', () => modal.toggle());
+    }
   }, []);
 
   return (
@@ -143,15 +151,14 @@ export const Header = ({ data }) => {
             </div>
             {/* fin Icon */}
             <button 
-              data-modal-target="search" 
-              data-modal-toggle="search" 
+              id="searchbtn"
               className="block opacity-70 hover:opacity-100 text-white focus:ring-4  font-medium rounded-lg text-sm px-5 py-2.5 text-center" 
               type="button"
               onClick={(e)=>{
                 if (window.PagefindUI && document.getElementsByClassName("pagefind-ui").length == 0) {
                   new window.PagefindUI({ element: "#search" });
                 }
-                console.log(e);
+
               }}
               onError={(e) => {
                 console.error('Script failed to load', e)
