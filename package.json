@@ -6,7 +6,7 @@
     "dev": "tinacms dev --watchFolders='components/util/icon.tsx' -c \"next dev\"",
     "build": "tinacms build && next build",
     "start": "tinacms build && npm run export && next start",
-    "export": "npm run build && next export && pagefind --source out && npm run copy",
+    "export": "npm run build && next export && pagefind --source out ",
     "lint": "eslint . --ext .ts,.tsx",
     "indexed": " pagefind --source out",
     "copy": "mkdirp -p ./out/pagefind/ && mkdirp -p ./out/pagefind/index/ && mkdirp -p ./out/pagefind/fragment/ && cp --recursive public/pagefind/ out/"
