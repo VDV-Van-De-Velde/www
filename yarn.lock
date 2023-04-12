@@ -796,7 +796,6 @@
   "version" "7.21.0"
   dependencies:
     "@babel/helper-plugin-utils" "^7.20.2"
-    "@babel/helper-plugin-utils" "^7.20.2"
 
 "@babel/plugin-transform-react-jsx-source@^7.19.6":
   "integrity" "sha512-RpAi004QyMNisst/pvSanoRdJ4q+jMCWyk9zdw/CyLB9j8RXEahodR6l2GyttDRyEVWZtbN+TpLiHJ3t34LbsQ=="
@@ -1200,7 +1199,7 @@
   "resolved" "https://registry.npmjs.org/@formatjs/intl-localematcher/-/intl-localematcher-0.2.32.tgz"
   "version" "0.2.32"
   dependencies:
-    "tslib" "^2.4.0"
+    "tslib" "2.4.0"
 
 "@graphiql/react@^0.17.1":
   "integrity" "sha512-p99Vnl3aoQsh/T651pkGiS0wqvn7y65Bv4Q32l990T2IIgEDqeqJxgwRp3F48Ol9dWzk6KzxNkZYqe5IVHEmoA=="
@@ -1472,7 +1471,6 @@
   "version" "3.2.0"
   dependencies:
     "@swc/helpers" "^0.4.14"
-    "@swc/helpers" "^0.4.14"
 
 "@internationalized/message@^3.1.0":
   "integrity" "sha512-Oo5m70FcBdADf7G8NkUffVSfuCdeAYVfsvNjZDi9ELpjvkc4YNJVTHt/NyTI9K7FgAVoELxiP9YmN0sJ+HNHYQ=="
@@ -1488,14 +1486,12 @@
   "version" "3.2.0"
   dependencies:
     "@swc/helpers" "^0.4.14"
-    "@swc/helpers" "^0.4.14"
 
 "@internationalized/string@^3.1.0":
   "integrity" "sha512-TJQKiyUb+wyAfKF59UNeZ/kELMnkxyecnyPCnBI1ma4NaXReJW+7Cc2mObXAqraIBJUVv7rgI46RLKrLgi35ng=="
   "resolved" "https://registry.npmjs.org/@internationalized/string/-/string-3.1.0.tgz"
   "version" "3.1.0"
   dependencies:
-    "@swc/helpers" "^0.4.14"
     "@swc/helpers" "^0.4.14"
 
 "@istanbuljs/load-nyc-config@^1.0.0":
@@ -1926,7 +1922,6 @@
   "version" "3.6.0"
   dependencies:
     "@swc/helpers" "^0.4.14"
-    "@swc/helpers" "^0.4.14"
 
 "@react-aria/utils@^3.16.0", "@react-aria/utils@^3.8.0":
   "integrity" "sha512-BumpgENDlXuoRPQm1OfVUYRcxY9vwuXw1AmUpwF61v55gAZT3LvJWsfF8jgfQNzLJr5jtr7xvUx7pXuEyFpJMA=="
@@ -2006,7 +2001,6 @@
   "resolved" "https://registry.npmjs.org/@react-stately/utils/-/utils-3.6.0.tgz"
   "version" "3.6.0"
   dependencies:
-    "@swc/helpers" "^0.4.14"
     "@swc/helpers" "^0.4.14"
 
 "@react-types/combobox@^3.2.0":
@@ -2263,7 +2257,6 @@
     "@graphql-codegen/typescript-operations" "^2.1.4"
     "@graphql-codegen/visitor-plugin-common" "^2.4.0"
     "@graphql-inspector/core" "^4.0.0"
-    "@graphql-inspector/core" "^4.0.0"
     "@graphql-tools/graphql-file-loader" "^7.2.0"
     "@graphql-tools/load" "^7.3.2"
     "@rollup/pluginutils" "^5.0.2"
@@ -2477,7 +2470,6 @@
     "@react-types/shared" "^3.10.0"
     "@sambego/storybook-styles" "^1.0.0"
     "@tinacms/sharedctx" "1.0.1"
-    "@tinacms/sharedctx" "1.0.1"
     "@udecode/plate-headless" "^14.0.2"
     "atob" "2.1.2"
     "color-string" "^1.5.3"
@@ -2521,8 +2513,6 @@
   "resolved" "https://registry.npmjs.org/@types/babel__core/-/babel__core-7.20.0.tgz"
   "version" "7.20.0"
   dependencies:
-    "@babel/parser" "^7.20.7"
-    "@babel/types" "^7.20.7"
     "@babel/parser" "^7.20.7"
     "@babel/types" "^7.20.7"
     "@types/babel__generator" "*"
@@ -2674,11 +2664,6 @@
   "integrity" "sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw=="
   "resolved" "https://registry.npmjs.org/@types/normalize-package-data/-/normalize-package-data-2.4.1.tgz"
   "version" "2.4.1"
-
-"@types/normalize-package-data@^2.4.0":
-  version "2.4.1"
-  resolved "https://registry.npmjs.org/@types/normalize-package-data/-/normalize-package-data-2.4.1.tgz"
-  integrity sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==
 
 "@types/parse-json@^4.0.0":
   "integrity" "sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA=="
@@ -4447,11 +4432,6 @@
   "resolved" "https://registry.npmjs.org/deepmerge/-/deepmerge-4.2.2.tgz"
   "version" "4.2.2"
 
-"define-lazy-prop@^2.0.0":
-  "integrity" "sha512-Ds09qNh8yw3khSjiJjiUInaGX9xlqZDY7JVryGxdxV7NPeuqQfplOpQ66yJFZut3jLa5zOwkXw1g9EI2uKh4Og=="
-  "resolved" "https://registry.npmjs.org/define-lazy-prop/-/define-lazy-prop-2.0.0.tgz"
-  "version" "2.0.0"
-
 "define-property@^0.2.5":
   "integrity" "sha512-Rr7ADjQZenceVOAKop6ALkkRAmH1A4Gx9hV/7ZujPUN2rkATqFO0JZLZInbAjpZYoJ1gUx8MRMQVkYemcbMSTA=="
   "resolved" "https://registry.npmjs.org/define-property/-/define-property-0.2.5.tgz"
@@ -5202,24 +5182,24 @@
   "resolved" "https://registry.npmjs.org/final-form-set-field-data/-/final-form-set-field-data-1.0.2.tgz"
   "version" "1.0.2"
 
-"final-form@^4.20.2", "final-form@^4.20.4", "final-form@^4.20.8":
+"final-form@^4.20.2", "final-form@^4.20.8":
   "integrity" "sha512-shA1X/7v8RmukWMNRHx0l7+Bm41hOivY78IvOiBrPVHjyWFIyqqIEMCz7yTVRc9Ea+EU4WkZ5r4MH6whSo5taw=="
   "resolved" "https://registry.npmjs.org/final-form/-/final-form-4.20.9.tgz"
   "version" "4.20.9"
   dependencies:
     "@babel/runtime" "^7.10.0"
 
-"final-form@>=1.2.0", "final-form@4.20.1":
-  "integrity" "sha512-IIsOK3JRxJrN72OBj7vFWZxtGt3xc1bYwJVPchjVWmDol9DlzMSAOPB+vwe75TUYsw1JaH0fTQnIgwSQZQ9Acg=="
-  "resolved" "https://registry.npmjs.org/final-form/-/final-form-4.20.1.tgz"
-  "version" "4.20.1"
-  dependencies:
-    "@babel/runtime" "^7.10.0"
-
-"final-form@4.20.7":
+"final-form@^4.20.4", "final-form@>=1.2.0", "final-form@4.20.7":
   "integrity" "sha512-ii3X9wNfyBYFnDPunYN5jh1/HAvtOZ9aJI/TVk0MB86hZuOeYkb+W5L3icgwW9WWNztZR6MDU3En6eoZTUoFPg=="
   "resolved" "https://registry.npmjs.org/final-form/-/final-form-4.20.7.tgz"
   "version" "4.20.7"
+  dependencies:
+    "@babel/runtime" "^7.10.0"
+
+"final-form@4.20.1":
+  "integrity" "sha512-IIsOK3JRxJrN72OBj7vFWZxtGt3xc1bYwJVPchjVWmDol9DlzMSAOPB+vwe75TUYsw1JaH0fTQnIgwSQZQ9Acg=="
+  "resolved" "https://registry.npmjs.org/final-form/-/final-form-4.20.1.tgz"
+  "version" "4.20.1"
   dependencies:
     "@babel/runtime" "^7.10.0"
 
@@ -5686,13 +5666,6 @@
   "resolved" "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.8.9.tgz"
   "version" "2.8.9"
 
-"hosted-git-info@^4.0.1":
-  "integrity" "sha512-kyCuEOWjJqZuDbRHzL8V93NzQhwIB71oFWSyzVo+KPZI+pnQPPxucdkrOZvkLRnrf5URsQM+IJ09Dw29cRALIA=="
-  "resolved" "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-4.1.0.tgz"
-  "version" "4.1.0"
-  dependencies:
-    "lru-cache" "^6.0.0"
-
 "html-entities@^2.3.3":
   "integrity" "sha512-DV5Ln36z34NNTDgnz0EWGBLZENelNAtkiFA4kyNOG2tDI6Mz1uSWiq1wAKdyjnJwyDiDO7Fa2SO1CTxPXL8VxA=="
   "resolved" "https://registry.npmjs.org/html-entities/-/html-entities-2.3.3.tgz"
@@ -5921,7 +5894,7 @@
   dependencies:
     "ci-info" "^2.0.0"
 
-"is-core-module@^2.5.0", "is-core-module@^2.9.0":
+"is-core-module@^2.9.0":
   "integrity" "sha512-RRjxlvLDkD1YJwDbroBHMb+cukurkDWNyHx7D3oNB5x9rb5ogcksMC5wHCadcXoo67gVr/+3GFySh3134zi6rw=="
   "resolved" "https://registry.npmjs.org/is-core-module/-/is-core-module-2.11.0.tgz"
   "version" "2.11.0"
@@ -6668,17 +6641,12 @@
     "mdurl" "^1.0.1"
     "uc.micro" "^1.0.5"
 
-"markdown-table@^2.0.0":
+"markdown-table@^2.0.0", "markdown-table@^3.0.0":
   "integrity" "sha512-Ezda85ToJUBhM6WGaG6veasyym+Tbs3cMAw/ZhOPqXiYsr0jgocBV3j3nx+4lk47plLlIqjwuTm/ywVI+zjJ/A=="
   "resolved" "https://registry.npmjs.org/markdown-table/-/markdown-table-2.0.0.tgz"
   "version" "2.0.0"
   dependencies:
     "repeat-string" "^1.0.0"
-
-"markdown-table@^3.0.0":
-  "integrity" "sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw=="
-  "resolved" "https://registry.npmjs.org/markdown-table/-/markdown-table-3.0.3.tgz"
-  "version" "3.0.3"
 
 "material-colors@^1.2.1":
   "integrity" "sha512-6qE4B9deFBIa9YSpOc9O0Sgc43zTeVYbgDT5veRKSlB2+ZuHNoVVxA1L/ckMUayV9Ay9y7Z/SZCLcGteW9i7bg=="
@@ -7031,9 +6999,9 @@
   "version" "2.0.0"
 
 "mdast-util-to-string@^3.0.0", "mdast-util-to-string@^3.1.0":
-  "integrity" "sha512-V4Zn/ncyN1QNSqSBxTrMOLpjr+IKdHl2v3KVLoWmDPscP4r9GcCi71gjgvUV1SFSKh92AjAG4peFuBl2/YgCJg=="
-  "resolved" "https://registry.npmjs.org/mdast-util-to-string/-/mdast-util-to-string-3.2.0.tgz"
-  "version" "3.2.0"
+  "integrity" "sha512-n4Vypz/DZgwo0iMHLQL49dJzlp7YtAJP+N07MZHpjPf/5XJuHUWstviF4Mn2jEiR/GNmtnRRqnwsXExk3igfFA=="
+  "resolved" "https://registry.npmjs.org/mdast-util-to-string/-/mdast-util-to-string-3.1.0.tgz"
+  "version" "3.1.0"
   dependencies:
     "@types/mdast" "^3.0.0"
 
@@ -7186,12 +7154,14 @@
     "micromark-util-symbol" "^1.0.0"
 
 "micromark-extension-gfm-autolink-literal@^1.0.0":
-  "integrity" "sha512-i3dmvU0htawfWED8aHMMAzAVp/F0Z+0bPh3YrbTPPL1v4YAlCZpy5rBO5p0LPYiZo0zFVkoYh7vDU7yQSiCMjg=="
-  "resolved" "https://registry.npmjs.org/micromark-extension-gfm-autolink-literal/-/micromark-extension-gfm-autolink-literal-1.0.3.tgz"
+  "integrity" "sha512-TjYtjEMszWze51NJCZmhv7MEBcgYRgb3tJeMAJ+HQCAaZHHRBaDCccqQzGizR/H4ODefP44wRTgOn2vE5I6nZA=="
+  "resolved" "https://registry.npmjs.org/micromark-extension-mdx-expression/-/micromark-extension-mdx-expression-1.0.3.tgz"
   "version" "1.0.3"
   dependencies:
+    "micromark-factory-mdx-expression" "^1.0.0"
+    "micromark-factory-space" "^1.0.0"
     "micromark-util-character" "^1.0.0"
-    "micromark-util-sanitize-uri" "^1.0.0"
+    "micromark-util-events-to-acorn" "^1.0.0"
     "micromark-util-symbol" "^1.0.0"
     "micromark-util-types" "^1.0.0"
     "uvu" "^0.5.0"
@@ -7203,49 +7173,12 @@
   dependencies:
     "micromark" "~2.11.3"
 
-"micromark-extension-gfm-footnote@^1.0.0":
-  "integrity" "sha512-RWYce7j8+c0n7Djzv5NzGEGitNNYO3uj+h/XYMdS/JinH1Go+/Qkomg/rfxExFzYTiydaV6GLeffGO5qcJbMPA=="
-  "resolved" "https://registry.npmjs.org/micromark-extension-gfm-footnote/-/micromark-extension-gfm-footnote-1.1.0.tgz"
-  "version" "1.1.0"
-  dependencies:
-    "micromark-core-commonmark" "^1.0.0"
-    "micromark-factory-space" "^1.0.0"
-    "micromark-util-character" "^1.0.0"
-    "micromark-util-normalize-identifier" "^1.0.0"
-    "micromark-util-sanitize-uri" "^1.0.0"
-    "micromark-util-symbol" "^1.0.0"
-    "micromark-util-types" "^1.0.0"
-    "uvu" "^0.5.0"
-
-"micromark-extension-gfm-strikethrough@^1.0.0":
-  "integrity" "sha512-X0oI5eYYQVARhiNfbETy7BfLSmSilzN1eOuoRnrf9oUNsPRrWOAe9UqSizgw1vNxQBfOwL+n2610S3bYjVNi7w=="
-  "resolved" "https://registry.npmjs.org/micromark-extension-gfm-strikethrough/-/micromark-extension-gfm-strikethrough-1.0.5.tgz"
-  "version" "1.0.5"
-  dependencies:
-    "micromark-util-chunked" "^1.0.0"
-    "micromark-util-classify-character" "^1.0.0"
-    "micromark-util-resolve-all" "^1.0.0"
-    "micromark-util-symbol" "^1.0.0"
-    "micromark-util-types" "^1.0.0"
-    "uvu" "^0.5.0"
-
 "micromark-extension-gfm-strikethrough@~0.6.5":
   "integrity" "sha512-PpOKlgokpQRwUesRwWEp+fHjGGkZEejj83k9gU5iXCbDG+XBA92BqnRKYJdfqfkrRcZRgGuPuXb7DaK/DmxOhw=="
   "resolved" "https://registry.npmjs.org/micromark-extension-gfm-strikethrough/-/micromark-extension-gfm-strikethrough-0.6.5.tgz"
   "version" "0.6.5"
   dependencies:
     "micromark" "~2.11.0"
-
-"micromark-extension-gfm-table@^1.0.0":
-  "integrity" "sha512-xAZ8J1X9W9K3JTJTUL7G6wSKhp2ZYHrFk5qJgY/4B33scJzE2kpfRL6oiw/veJTbt7jiM/1rngLlOKPWr1G+vg=="
-  "resolved" "https://registry.npmjs.org/micromark-extension-gfm-table/-/micromark-extension-gfm-table-1.0.5.tgz"
-  "version" "1.0.5"
-  dependencies:
-    "micromark-factory-space" "^1.0.0"
-    "micromark-util-character" "^1.0.0"
-    "micromark-util-symbol" "^1.0.0"
-    "micromark-util-types" "^1.0.0"
-    "uvu" "^0.5.0"
 
 "micromark-extension-gfm-table@~0.4.0":
   "integrity" "sha512-hVGvESPq0fk6ALWtomcwmgLvH8ZSVpcPjzi0AjPclB9FsVRgMtGZkUcpE0zgjOCFAznKepF4z3hX8z6e3HODdA=="
@@ -7254,28 +7187,10 @@
   dependencies:
     "micromark" "~2.11.0"
 
-"micromark-extension-gfm-tagfilter@^1.0.0":
-  "integrity" "sha512-5XWB9GbAUSHTn8VPU8/1DBXMuKYT5uOgEjJb8gN3mW0PNW5OPHpSdojoqf+iq1xo7vWzw/P8bAHY0n6ijpXF7g=="
-  "resolved" "https://registry.npmjs.org/micromark-extension-gfm-tagfilter/-/micromark-extension-gfm-tagfilter-1.0.2.tgz"
-  "version" "1.0.2"
-  dependencies:
-    "micromark-util-types" "^1.0.0"
-
 "micromark-extension-gfm-tagfilter@~0.3.0":
   "integrity" "sha512-9GU0xBatryXifL//FJH+tAZ6i240xQuFrSL7mYi8f4oZSbc+NvXjkrHemeYP0+L4ZUT+Ptz3b95zhUZnMtoi/Q=="
   "resolved" "https://registry.npmjs.org/micromark-extension-gfm-tagfilter/-/micromark-extension-gfm-tagfilter-0.3.0.tgz"
   "version" "0.3.0"
-
-"micromark-extension-gfm-task-list-item@^1.0.0":
-  "integrity" "sha512-9XlIUUVnYXHsFF2HZ9jby4h3npfX10S1coXTnV035QGPgrtNYQq3J6IfIvcCIUAJrrqBVi5BqA/LmaOMJqPwMQ=="
-  "resolved" "https://registry.npmjs.org/micromark-extension-gfm-task-list-item/-/micromark-extension-gfm-task-list-item-1.0.4.tgz"
-  "version" "1.0.4"
-  dependencies:
-    "micromark-factory-space" "^1.0.0"
-    "micromark-util-character" "^1.0.0"
-    "micromark-util-symbol" "^1.0.0"
-    "micromark-util-types" "^1.0.0"
-    "uvu" "^0.5.0"
 
 "micromark-extension-gfm-task-list-item@~0.3.0":
   "integrity" "sha512-0zvM5iSLKrc/NQl84pZSjGo66aTGd57C1idmlWmE87lkMcXrTxg1uXa/nXomxJytoje9trP0NDLvw4bZ/Z/XCQ=="
@@ -7889,16 +7804,6 @@
     "hosted-git-info" "^2.1.4"
     "resolve" "^1.10.0"
     "semver" "2 || 3 || 4 || 5"
-    "validate-npm-package-license" "^3.0.1"
-
-"normalize-package-data@^3.0.0":
-  "integrity" "sha512-p2W1sgqij3zMMyRC067Dg16bfzVH+w7hyegmpIvZ4JNjqtGOVAIvLmjBx3yP7YTe9vKJgkoNOPjwQGogDoMXFA=="
-  "resolved" "https://registry.npmjs.org/normalize-package-data/-/normalize-package-data-3.0.3.tgz"
-  "version" "3.0.3"
-  dependencies:
-    "hosted-git-info" "^4.0.1"
-    "is-core-module" "^2.5.0"
-    "semver" "^7.3.4"
     "validate-npm-package-license" "^3.0.1"
 
 "normalize-path@^2.1.1":
@@ -9199,13 +9104,6 @@
   "resolved" "https://registry.npmjs.org/semver/-/semver-6.3.0.tgz"
   "version" "6.3.0"
 
-"semver@^7.3.4":
-  "integrity" "sha512-RgOxM8Mw+7Zus0+zcLEUn8+JfoLpj/huFTItQy2hsM4khuC1HYRDp0cU482Ewn/Fcy6bCjufD8vAj7voC66KQw=="
-  "resolved" "https://registry.npmjs.org/semver/-/semver-7.4.0.tgz"
-  "version" "7.4.0"
-  dependencies:
-    "lru-cache" "^6.0.0"
-
 "semver@^7.3.7":
   "integrity" "sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A=="
   "resolved" "https://registry.npmjs.org/semver/-/semver-7.3.8.tgz"
@@ -10038,7 +9936,7 @@
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
   "version" "1.14.1"
 
-"tslib@^2.0.0", "tslib@^2.0.3", "tslib@^2.1.0", "tslib@^2.3.0", "tslib@^2.4.0", "tslib@~2.4.0":
+"tslib@^2.0.0", "tslib@^2.0.3", "tslib@^2.1.0", "tslib@^2.3.0", "tslib@^2.4.0", "tslib@~2.4.0", "tslib@2.4.0":
   "integrity" "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz"
   "version" "2.4.0"
