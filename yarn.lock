@@ -796,6 +796,7 @@
   "version" "7.21.0"
   dependencies:
     "@babel/helper-plugin-utils" "^7.20.2"
+    "@babel/helper-plugin-utils" "^7.20.2"
 
 "@babel/plugin-transform-react-jsx-source@^7.19.6":
   "integrity" "sha512-RpAi004QyMNisst/pvSanoRdJ4q+jMCWyk9zdw/CyLB9j8RXEahodR6l2GyttDRyEVWZtbN+TpLiHJ3t34LbsQ=="
@@ -1471,6 +1472,7 @@
   "version" "3.2.0"
   dependencies:
     "@swc/helpers" "^0.4.14"
+    "@swc/helpers" "^0.4.14"
 
 "@internationalized/message@^3.1.0":
   "integrity" "sha512-Oo5m70FcBdADf7G8NkUffVSfuCdeAYVfsvNjZDi9ELpjvkc4YNJVTHt/NyTI9K7FgAVoELxiP9YmN0sJ+HNHYQ=="
@@ -1486,12 +1488,14 @@
   "version" "3.2.0"
   dependencies:
     "@swc/helpers" "^0.4.14"
+    "@swc/helpers" "^0.4.14"
 
 "@internationalized/string@^3.1.0":
   "integrity" "sha512-TJQKiyUb+wyAfKF59UNeZ/kELMnkxyecnyPCnBI1ma4NaXReJW+7Cc2mObXAqraIBJUVv7rgI46RLKrLgi35ng=="
   "resolved" "https://registry.npmjs.org/@internationalized/string/-/string-3.1.0.tgz"
   "version" "3.1.0"
   dependencies:
+    "@swc/helpers" "^0.4.14"
     "@swc/helpers" "^0.4.14"
 
 "@istanbuljs/load-nyc-config@^1.0.0":
@@ -1922,6 +1926,7 @@
   "version" "3.6.0"
   dependencies:
     "@swc/helpers" "^0.4.14"
+    "@swc/helpers" "^0.4.14"
 
 "@react-aria/utils@^3.16.0", "@react-aria/utils@^3.8.0":
   "integrity" "sha512-BumpgENDlXuoRPQm1OfVUYRcxY9vwuXw1AmUpwF61v55gAZT3LvJWsfF8jgfQNzLJr5jtr7xvUx7pXuEyFpJMA=="
@@ -2001,6 +2006,7 @@
   "resolved" "https://registry.npmjs.org/@react-stately/utils/-/utils-3.6.0.tgz"
   "version" "3.6.0"
   dependencies:
+    "@swc/helpers" "^0.4.14"
     "@swc/helpers" "^0.4.14"
 
 "@react-types/combobox@^3.2.0":
@@ -2257,6 +2263,7 @@
     "@graphql-codegen/typescript-operations" "^2.1.4"
     "@graphql-codegen/visitor-plugin-common" "^2.4.0"
     "@graphql-inspector/core" "^4.0.0"
+    "@graphql-inspector/core" "^4.0.0"
     "@graphql-tools/graphql-file-loader" "^7.2.0"
     "@graphql-tools/load" "^7.3.2"
     "@rollup/pluginutils" "^5.0.2"
@@ -2470,6 +2477,7 @@
     "@react-types/shared" "^3.10.0"
     "@sambego/storybook-styles" "^1.0.0"
     "@tinacms/sharedctx" "1.0.1"
+    "@tinacms/sharedctx" "1.0.1"
     "@udecode/plate-headless" "^14.0.2"
     "atob" "2.1.2"
     "color-string" "^1.5.3"
@@ -2513,6 +2521,8 @@
   "resolved" "https://registry.npmjs.org/@types/babel__core/-/babel__core-7.20.0.tgz"
   "version" "7.20.0"
   dependencies:
+    "@babel/parser" "^7.20.7"
+    "@babel/types" "^7.20.7"
     "@babel/parser" "^7.20.7"
     "@babel/types" "^7.20.7"
     "@types/babel__generator" "*"
@@ -2664,6 +2674,11 @@
   "integrity" "sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw=="
   "resolved" "https://registry.npmjs.org/@types/normalize-package-data/-/normalize-package-data-2.4.1.tgz"
   "version" "2.4.1"
+
+"@types/normalize-package-data@^2.4.0":
+  version "2.4.1"
+  resolved "https://registry.npmjs.org/@types/normalize-package-data/-/normalize-package-data-2.4.1.tgz"
+  integrity sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==
 
 "@types/parse-json@^4.0.0":
   "integrity" "sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA=="
