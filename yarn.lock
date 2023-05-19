@@ -2244,7 +2244,7 @@
     "typescript" "^4.6.4"
     "zod" "^3.14.3"
 
-"@tinacms/cli@^1.5.8":
+"@tinacms/cli@^1.5.11":
   "integrity" "sha512-WV3hysrgjECrFLKljFoLbGx1zX5RoJpYcZhB2/mEk6z6wS4/0qpKPdFOTW0JM2sTXibiTd+FgVEBxR/mryQ4Ow=="
   "resolved" "https://registry.npmjs.org/@tinacms/cli/-/cli-1.5.14.tgz"
   "version" "1.5.14"
@@ -9881,7 +9881,7 @@
   dependencies:
     "any-promise" "^1.0.0"
 
-"tinacms@^1.5.1", "tinacms@1.5.6":
+"tinacms@^1.5.4", "tinacms@1.5.6":
   "integrity" "sha512-2qryA9LwkRyg+Dc7mMRvcGosHhk0jH6Xea0JmIrcdsjhMBMLDIs9DUag7NQNZkGqmI/QRuiUEgRt2WDfACVfEw=="
   "resolved" "https://registry.npmjs.org/tinacms/-/tinacms-1.5.6.tgz"
   "version" "1.5.6"
