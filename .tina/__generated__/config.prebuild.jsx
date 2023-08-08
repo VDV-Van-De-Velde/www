@@ -86,6 +86,7 @@ var useTheme = () => React5.useContext(ThemeContext);
 
 // components/blocks/content.tsx
 import { TinaMarkdown } from "tinacms/dist/rich-text";
+import { tinaField } from "tinacms/dist/react";
 var contentBlockSchema = {
   name: "content",
   label: "Content",
@@ -339,7 +340,7 @@ var Icon = ({
   data,
   parentColor = "",
   className = "",
-  tinaField = ""
+  tinaFields = ""
 }) => {
   if (IconOptions[data.name] === null || IconOptions[data.name] === void 0) {
     return null;
@@ -353,7 +354,7 @@ var Icon = ({
     return React12.createElement(
       "div",
       {
-        "data-tinafield": tinaField,
+        "data-tinafield": tinaFields,
         className: `relative z-8 inline-flex items-center justify-center flex-shrink-0 ${iconSizeClasses} rounded-full ${iconColorClass[iconColor].circle} ${className}`
       },
       React12.createElement(IconSVG, { className: "w-2/3 h-2/3" })
@@ -363,7 +364,7 @@ var Icon = ({
     return React12.createElement(
       IconSVG,
       {
-        "data-tinafield": tinaField,
+        "data-tinafield": tinaFields,
         className: `${iconSizeClasses} ${iconColorClasses} ${className}`
       }
     );
@@ -409,6 +410,7 @@ var iconSchema = {
 };
 
 // components/blocks/features.tsx
+import { tinaField as tinaField2 } from "tinacms/dist/react";
 var defaultFeature = {
   title: "Here's Another Feature",
   text: "This is where you might talk about the feature, if this wasn't just filler text.",
@@ -476,6 +478,7 @@ var featureBlockSchema = {
 // components/blocks/hero.tsx
 import * as React13 from "react";
 import { TinaMarkdown as TinaMarkdown2 } from "tinacms/dist/rich-text";
+import { tinaField as tinaField3 } from "tinacms/dist/react";
 var heroBlockSchema = {
   name: "hero",
   label: "Hero",
@@ -576,6 +579,7 @@ var heroBlockSchema = {
 
 // components/blocks/testimonial.tsx
 import React14 from "react";
+import { tinaField as tinaField4 } from "tinacms/dist/react";
 var testimonialBlockSchema = {
   name: "testimonial",
   label: "Testimonial",

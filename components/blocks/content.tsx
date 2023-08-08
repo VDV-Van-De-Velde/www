@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "../util/container";
 import { Section } from "../util/section";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
+import { tinaField } from 'tinacms/dist/react'
 import type { Template } from "tinacms";
 
 export const Content = ({ data, parentField = "" }) => {
@@ -14,6 +15,7 @@ export const Content = ({ data, parentField = "" }) => {
         data-tinafield={`${parentField}.body`}
         size="large"
         width="medium"
+        data-tina-field={tinaField(data, 'body')}
       >
         <TinaMarkdown content={data.body} />
       </Container>

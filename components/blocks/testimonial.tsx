@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "../util/container";
 import { Section } from "../util/section";
 import type { Template } from "tinacms";
+import { tinaField } from 'tinacms/dist/react'
 
 export const Testimonial = ({ data, parentField = "" }) => {
   return (
@@ -22,6 +23,7 @@ export const Testimonial = ({ data, parentField = "" }) => {
             </span>
             <p
               data-tinafield={`${parentField}.quote`}
+              data-tina-field={tinaField(data, 'quote')}
               className="relative opacity-95"
             >
               {data.quote}
@@ -44,6 +46,7 @@ export const Testimonial = ({ data, parentField = "" }) => {
           <footer className="text-center">
             <p
               data-tinafield={`${parentField}.author`}
+              data-tina-field={tinaField(data, 'author')}
               className={`tracking-wide title-font font-bold text-lg ${
                 data.color === "primary"
                   ? `text-blue-200`

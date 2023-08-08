@@ -2,6 +2,8 @@ import { Blocks } from "../components/blocks-renderer";
 import { useTina } from "tinacms/dist/react";
 import { Layout } from "../components/layout";
 import { client } from "../.tina/__generated__/client";
+import { tinaField } from 'tinacms/dist/react'
+
 
 export default function HomePage(
   props: AsyncReturnType<typeof getStaticProps>["props"]

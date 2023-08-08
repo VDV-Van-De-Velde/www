@@ -5,6 +5,8 @@ import { Section } from "../util/section";
 import { useTheme } from "../layout";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import type { Template } from "tinacms";
+import { tinaField } from 'tinacms/dist/react'
+
 
 export const Hero = ({ data, parentField }) => {
   const theme = useTheme();
@@ -29,6 +31,7 @@ export const Hero = ({ data, parentField }) => {
           {data.tagline && (
             <h2
               data-tinafield={`${parentField}.tagline`}
+              data-tina-field={tinaField(data, 'tagline')}
               className="relative inline-block px-3 py-1 mb-8 text-md font-bold tracking-wide title-font z-20"
             >
               {data.tagline}
@@ -38,6 +41,7 @@ export const Hero = ({ data, parentField }) => {
           {data.headline && (
             <h3
               data-tinafield={`${parentField}.headline`}
+              data-tina-field={tinaField(data, 'headline')}
               className={`w-full relative	mb-10 text-5xl font-extrabold tracking-normal leading-tight title-font`}
             >
               <span
@@ -57,8 +61,9 @@ export const Hero = ({ data, parentField }) => {
               className={`prose prose-lg mx-auto lg:mx-0 mb-10 ${
                 data.color === "primary" ? `prose-primary` : `dark:prose-dark`
               }`}
+              data-tina-field={tinaField(data, 'text')}
             >
-              <TinaMarkdown content={data.text} />
+              <TinaMarkdown  content={data.text} />
             </div>
           )}
           {data.actions && (
@@ -66,6 +71,7 @@ export const Hero = ({ data, parentField }) => {
               parentField={`${parentField}.actions`}
               className="justify-center lg:justify-start py-2"
               parentColor={data.color}
+              data-tina-field={tinaField(data, 'actions')}
               actions={data.actions}
             />
           )}
@@ -74,6 +80,7 @@ export const Hero = ({ data, parentField }) => {
           <div
             data-tinafield={`${parentField}.image`}
             className="relative row-start-1 lg:col-span-2 flex justify-center"
+            data-tina-field={tinaField(data, 'image')}
           >
             <img
               className="absolute w-full rounded-lg max-w-xs lg:max-w-none h-auto blur-2xl brightness-150 contrast-[0.9] dark:brightness-150 saturate-200 opacity-50 dark:opacity-30 mix-blend-multiply dark:mix-blend-hard-light"
