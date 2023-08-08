@@ -486,6 +486,14 @@ const config = defineStaticConfig({
       },
     ],
   },
+  search: {
+    tina: {
+      indexerToken: 'acadc36927a3366a3140e03e0f0a22fa407f77fb',
+      stopwordLanguages: ['fra']
+    },
+    indexBatchSize: 100,
+    maxSearchIndexFieldLength: 100
+  },
 });
 
 export default config;
