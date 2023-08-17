@@ -14,7 +14,7 @@ export const Posts = ({ data }) => {
           formattedDate = format(date, "MMM dd, yyyy");
         }
         return (
-          <div key={post.id} className="mb-4 grow p-0 sm:p-4 md:w-1/3 max-w-2xl"> {/* Card container */}
+          <div key={post.id} className={`mb-4 grow p-0 sm:p-4 md:w-1/3 max-w-2xl ${encodeURIComponent(post?.category?.name)}`}> {/* Card container */}
             <div key={post.id} className="group h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-lg">
             <Link
                 key={post.id}

@@ -189,9 +189,9 @@ export const Post = (props) => {
      const router = useRouter();
   return (
     <Section  className="flex-1">
-      <Container width="large" className={`flex-1 pb-2`} size="large" >
-      <div data-pagefind-meta="excerpt" data-pagefind-index-attrs="excerpt" className="invisible h-0"><TinaMarkdown content={props.excerpt} /> </div>
-      <div data-pagefind-meta="url" data-pagefind-index-attrs="url" className="invisible h-0">{router.asPath}</div>
+      <Container width="large" className={`flex-1 pb-2`} size="large" data-pagefind-body>
+        <div data-pagefind-meta="excerpt" data-pagefind-index-attrs="excerpt" className="invisible h-0"><TinaMarkdown content={props.excerpt} /> </div>
+        <div data-pagefind-meta="url" data-pagefind-index-attrs="url" className="invisible h-0">{router.asPath}</div>
         <h2
           data-tinafield="title"
           data-pagefind-meta="title"
@@ -238,7 +238,7 @@ export const Post = (props) => {
           <div className="flex items-center justify-center mb-2">
             {props.category &&(
               <>
-                <p data-pagefind-meta="Category" data-pagefind-index-attrs="Category" data-tinafield="category" className="text-base font-bold italic text-gray-700">
+                <p data-pagefind-meta="Category" data-pagefind-index-attrs="Category" data-pagefind-filter="Category" data-tinafield="category" className="text-base font-bold italic text-gray-700">
                   {props.category.name}
                 </p>
               </>
@@ -277,7 +277,7 @@ export const Post = (props) => {
         </div>
       )}
       
-      <Container data-pagefind-body className={`flex-1 pt-4`} width="large" size="large">
+      <Container className={`flex-1 pt-4`} width="large" size="large">
         <div  className="prose dark:prose-dark w-full max-w-none h1-center">
           <TinaMarkdown components={components} content={props._body} />
         </div>
